@@ -7,7 +7,8 @@ class Login extends CI_Controller {
 	
 	function validate_credentials() { 
 		$this->load->model('ldap_model');
-		$query = $this->ldap_model->validate();
-		print_r($query);
+		$result = $this->ldap_model->validate();
+		print_r($result);
+		$uid = substr ($result, 11, strpos ($result, '"', 12)-11);
 	}
 }
