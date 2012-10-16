@@ -1,0 +1,43 @@
+body {
+}
+
+#wrap {
+}
+
+#header {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #ba330d;
+}
+
+#wrap {
+	width: 90%;
+	height: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#content {
+	width: 73%;
+	float: left;
+	background-color: #e6e6e6;
+}
+
+#sidebar {
+	width: 23%;
+	float: right;
+	background-color: #e6e6e6;
+}
+
+#footer {
+	position: fixed; 
+	bottom: 0; 
+	height: 100px; 
+	width: 100%; 
+	background-image: url(../images/footer_bg.jpg); 
+	background-repeat: repeat-x;}
+
+p.slogan {
+	color: #636363;
+}
