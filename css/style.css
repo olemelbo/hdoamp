@@ -4,6 +4,10 @@ body {
 #wrap {
 }
 
+.clear_both {
+	float: clear;
+}
+
 #header {
 	width: 100%;
 	margin-left: auto;
@@ -37,6 +41,15 @@ body {
 	width: 100%; 
 	background-image: url(../images/footer_bg.jpg); 
 	background-repeat: repeat-x;}
+
+.logo {
+	float: left;	
+}
+
+#login, #register {
+	float: right;
+}
+
 
 p.slogan {
 	color: #636363;

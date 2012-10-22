@@ -1,7 +1,8 @@
 <?php
 class Site extends CI_Controller {
 	function index() {
-		$this->load->view("home");
+		$data["main_content"] = "home";
+		$this->load->view("includes/template", $data);	
 	}
 
 }

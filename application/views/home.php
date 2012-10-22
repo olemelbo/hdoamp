@@ -1,8 +1,20 @@
 <div id="wrap">
 	<div id="header">
-		<h1>HiG Debatt</h1><h3>Logg inn – Registrer – Søk</h3>
+		<div class="logo"><h1>HiG Debatt</h1></div>
+		<div id="login"><h3>Logg inn</h3></div>
+		
+		<div id="login_window" title="Logg inn her" style="display:none;">
+		       <form method="post" action="" id="login_credentials">
+		       		<input name="uname" type="text" value="Brukernavn" id="uname" />
+		       		<input name="pwd" type="password" value="Passord" id="pwd" />
+		       		<input name="submit" type="submit" value="Logg inn" id="login_submit" />
+		       </form>		       
+		 </div>
+		 
+		<div id="register"><h3>Registrer</h3></div>
 		<p class="slogan">Husk å være snill og grei, ellers blir det ingen debatt på deg!</p>
-	</div>
+	</div><!-- end header-->
+
 	<div id="content">
 		<p>Mange fine innlegg</p>
 	</div>

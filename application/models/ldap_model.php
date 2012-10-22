@@ -1,13 +1,12 @@
 <?php
 class Ldap_model extends CI_Model {
-	private $username;
-	private $password;
-	function validate() {
+	
+	function validate($username, $password) {
 		$username = $this->input->post("user_id");
 		$password = $this->input->post("pwd");
 		// If no username/password is set this can never work
 		if ((!isset ($username))||(!isset ($password))) {
-			echo "Brukernavn/passord er skrevet inn feil";
+			echo "Brukernavn/passord er skrevet ikke skrevet inn";
 			die();	 
 		}
 		
