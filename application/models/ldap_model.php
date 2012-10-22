@@ -1,22 +1,31 @@
 <?php
 class Ldap_model extends CI_Model {
-	
-	function validate($username, $password) {
-		$username = $this->input->post("user_id");
-		$password = $this->input->post("pwd");
+	private $username;
+	private $password;
+	private $result;
+	function validate($_POST) {
+		$username = $_POST["uname"];
+		$password = $_POST["pwd"];
 		// If no username/password is set this can never work
-		if ((!isset ($username))||(!isset ($password))) {
+		if ((!isset ($username)||(!isset ($password)))) {
 			echo "Brukernavn/passord er skrevet ikke skrevet inn";
 			die();	 
 		}
 		
 		// Send a POST request with the username and password.
 		// See http://wezfurlong.org/blog/2006/nov/http-post-from-php-without-curl/
-		// for details about the do_post_request
+		// for details about the do_post_reqest
 		$result = trim ($this->do_post_request ('http://tvil.hig.no/json_services/checkUserLogin.php',  http_build_query($_POST)));
-		if(!empty($result)) {
-			return $result;
+		
+		if (strpos ($result, 'uid":"')>0) {
+			$response['response'] = "ok";
+			$response['msg'] = "Brukeren ble velykket logget inn"; 
+		} else {
+			$response['response'] = "error";
+			$response['error'] = "Feil brukernavn eller passord";
 		}
+		
+		echo json_encode($response);
 	}
 	
 	/**

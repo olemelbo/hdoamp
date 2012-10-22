@@ -4,10 +4,10 @@
 		<div id="login"><h3>Logg inn</h3></div>
 		
 		<div id="login_window" title="Logg inn her" style="display:none;">
-		       <form method="post" action="" id="login_credentials">
+		       <form method="post" action="#" id="login_credentials">
 		       		<input name="uname" type="text" value="Brukernavn" id="uname" />
 		       		<input name="pwd" type="password" value="Passord" id="pwd" />
-		       		<input name="submit" type="submit" value="Logg inn" id="login_submit" />
+		       		<button type="button" id="login_submit" name="Login">Logg inn</button>
 		       </form>		       
 		 </div>
 		 

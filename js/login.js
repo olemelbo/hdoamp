@@ -3,18 +3,25 @@ jQuery(document).ready(function($){
 		$('#login_window').dialog({ resizable: false });
 	});
 	
+	var siteURL = $("#siteurl p").text();
+	alert(siteURL);
 	$("#login_submit").click(function() {
 		var data = { 
-			user_id : $("input#uname").val(),
-			pwd : $("input#uname").val()
+			uname : $("input#uname").val(),
+			pwd : $("input#pwd").val()
 		};
-				
+		
 		$.ajax ({
-				url : "<?php echo site_url('login/validate_credentials'); ?>",
+				url : siteURL + "/login/validate_credentials",
 				type : 'POST',
 				data : data,
 				success : function (data) {
-				
+					data = $.parseJSON(data);
+					if(data.response == "ok") {
+						alert(data.msg);
+					} else {
+						alert(data.error);
+					}
 				}
 				
 		});
