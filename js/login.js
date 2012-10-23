@@ -18,6 +18,7 @@ jQuery(document).ready(function($){
 					data = $.parseJSON(data);
 					if(data.response == "ok") {
 						$('#login_window').dialog('close');
+						location.reload();
 					} else {
 						alert(data.error);
 					}

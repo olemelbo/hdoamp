@@ -16,11 +16,13 @@ jQuery(document).ready(function($){
 				type : 'POST',
 				data : data,
 				success : function (data) {
-					
+					$('#logout_window').dialog('close');
+					location.reload();
 				}
 				
 		});
 	});
+	
 	
 	
 });//Document ready slutt

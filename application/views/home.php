@@ -1,6 +1,6 @@
 <div id="wrap">
 	<div id="header">
-		<div class="logo"><h1>HiG Debatt</h1></div>
+		<div class="logo"><h1><a href="<?php echo site_url(); ?>">HiG Debatt</a></h1></div>
 		<?php
 			$session = $this->session->userdata('uid');
 			if($session == true) {
@@ -12,11 +12,11 @@
 				foreach ($query->result_array() as $row) { $fnavn = $row['fnavn']; }
 				foreach ($query->result_array() as $row) { $enavn = $row['enavn']; }
 				
-				echo "<div id='user_profile'><h3>" . $fnavn . " " . $enavn ."</h3></div>";
+				echo "<div id='user_profile'><h3><a href='#'>" . $fnavn . " " . $enavn ."</a></h3></div>";
 				
-				echo "<div id='logout'><h3>Logg ut</h3></div>";
+				echo "<div id='logout'><h3><a href='#'>Logg ut</a></h3></div>";
 			} else {
-				echo "<div id='login'><h3>Logg inn</h3></div>";
+				echo "<div id='login'><h3><a href='#'>Logg inn</a></h3></div>";
 			}
 		?>
 		
@@ -33,8 +33,8 @@
 	<div id="login_window" title="Logg inn her" style="display:none;">
 		<form method="post" action="#" id="login_credentials">
 			<input name="uname" type="text" value="Brukernavn" id="uname" />
-		    <input name="pwd" type="password" value="Passord" id="pwd" />
-		     <button type="button" id="login_submit" name="Login">Logg inn</button>
+		    <input name="pwd" type="password" value="" id="pwd" />
+		    <button type="button" id="login_submit" name="Login">Logg inn</button>
 		 </form>		       
 	</div>
 		
