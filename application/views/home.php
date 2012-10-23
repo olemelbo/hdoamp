@@ -10,8 +10,7 @@
 		       		<button type="button" id="login_submit" name="Login">Logg inn</button>
 		       </form>		       
 		 </div>
-		 
-		<div id="register"><h3>Registrer</h3></div>
+		
 		<p class="slogan">Husk å være snill og grei, ellers blir det ingen debatt på deg!</p>
 	</div><!-- end header-->
 

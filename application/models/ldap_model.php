@@ -2,7 +2,6 @@
 class Ldap_model extends CI_Model {
 	private $username;
 	private $password;
-	private $result;
 	function validate($_POST) {
 		$username = $_POST["uname"];
 		$password = $_POST["pwd"];
@@ -18,8 +17,15 @@ class Ldap_model extends CI_Model {
 		$result = trim ($this->do_post_request ('http://tvil.hig.no/json_services/checkUserLogin.php',  http_build_query($_POST)));
 		
 		if (strpos ($result, 'uid":"')>0) {
+			// Get the user id from the json string
+			$uid = substr ($result, 11, strpos ($result, '"', 12)-11);
+			//Add user id to session
+			$_SESSION['uid'] = $uid;
+			
+			$this->saveUser($uid);
+			
 			$response['response'] = "ok";
-			$response['msg'] = "Brukeren ble velykket logget inn"; 
+			$response['msg'] = "Brukeren ble velykket logget inn";
 		} else {
 			$response['response'] = "error";
 			$response['error'] = "Feil brukernavn eller passord";
@@ -49,5 +55,24 @@ class Ldap_model extends CI_Model {
 			throw new Exception("Problem reading data from $url, $php_errormsg");
 		}
 		return $response;
+	}
+	
+	function saveUser($uid) {
+		$sql = "SELECT studnr FROM bruker WHERE studnr = ?";
+		$result = $this->db->query($sql, $uid); 
+		print_r($result);
+		$result->num_rows() > 0 ? $this->updateUser($uid) : $this->addUser($uid);
+	}
+	
+	function addUser($uid) {
+		$current_time = Date("Y-m-d H:i:s");
+		$sql = "INSERT INTO bruker (studnr, sist_innlogget) VALUES (?, ?)";
+		$this->db->query($sql, array($uid, $current_time));
+	}
+	
+	function updateUser($uid) {
+		$current_time = Date("Y-m-d H:i:s");
+		$sql = "UPDATE bruker SET sist_innlogget = ? WHERE studnr= ?";
+		$this->db->query($sql, array($current_time, $uid));
 	}
 }

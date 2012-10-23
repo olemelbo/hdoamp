@@ -4,7 +4,6 @@ jQuery(document).ready(function($){
 	});
 	
 	var siteURL = $("#siteurl p").text();
-	alert(siteURL);
 	$("#login_submit").click(function() {
 		var data = { 
 			uname : $("input#uname").val(),
