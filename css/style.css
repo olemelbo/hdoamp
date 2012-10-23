@@ -46,7 +46,7 @@ body {
 	float: left;	
 }
 
-#login, #register {
+#login, #register, #logout {
 	float: right;
 }
 

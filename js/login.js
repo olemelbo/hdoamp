@@ -17,7 +17,7 @@ jQuery(document).ready(function($){
 				success : function (data) {
 					data = $.parseJSON(data);
 					if(data.response == "ok") {
-						alert(data.msg);
+						$('#login_window').dialog('close');
 					} else {
 						alert(data.error);
 					}

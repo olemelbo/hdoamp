@@ -20,7 +20,8 @@ class Ldap_model extends CI_Model {
 			// Get the user id from the json string
 			$uid = substr ($result, 11, strpos ($result, '"', 12)-11);
 			//Add user id to session
-			$_SESSION['uid'] = $uid;
+			
+			$this->session->set_userdata('uid', $uid);
 			
 			$this->saveUser($uid);
 			
@@ -57,17 +58,44 @@ class Ldap_model extends CI_Model {
 		return $response;
 	}
 	
+	/**
+	* Funksjon for å hente studentobjektet fra tvil-databasen
+	* @param snr -> studentnr som som objektet skal hentes ut fra
+	*/
+	function getByUid($snr) {
+		$jsonurl = 'https://tvil.hig.no/json_services/getUserDetails.php';//Henter detaljer om objektet
+		$postdata = http_build_query(array("uid" => $snr));
+
+		$opts = array('http' =>
+			array(
+				'method' => 'POST',
+				'header' => 'Content-type: application/x-www-form-urlencoded',
+				'content' => $postdata
+			)
+		);
+
+		$context = stream_context_create($opts);
+
+		$result = file_get_contents($jsonurl, true, $context);
+
+		$obj = substr($result, 3);
+
+		$arr = json_decode($obj, true);
+
+		return $arr;
+	}
+	
 	function saveUser($uid) {
 		$sql = "SELECT studnr FROM bruker WHERE studnr = ?";
 		$result = $this->db->query($sql, $uid); 
-		print_r($result);
 		$result->num_rows() > 0 ? $this->updateUser($uid) : $this->addUser($uid);
 	}
 	
 	function addUser($uid) {
+		$userDetails = $this->getByUid($uid);
 		$current_time = Date("Y-m-d H:i:s");
-		$sql = "INSERT INTO bruker (studnr, sist_innlogget) VALUES (?, ?)";
-		$this->db->query($sql, array($uid, $current_time));
+		$sql = "INSERT INTO bruker (studnr, fnavn, enavn, email, department, sist_innlogget) VALUES (?, ?, ?,?,?,?)";
+		$this->db->query($sql, array($uid,$userDetails['givenname'], $userDetails['surename'], $userDetails['email'], $userDetails['department'], $current_time));
 	}
 	
 	function updateUser($uid) {
