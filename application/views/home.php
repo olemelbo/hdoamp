@@ -20,6 +20,7 @@
 				echo "<div id='login'><h3><a href='#'>Logg inn</a></h3></div>";
 			}
 		?>
+
 	</div><!-- end header-->	
 	
 	<div id="pen-wrapper">
@@ -29,7 +30,6 @@
 			<p>Husk å være snill og grei, ellers blir det ingen debatt på deg!</p>
 		</div><!-- #slogan -->
 	</div>
-	
 
 	<div id="content">
 		<p>Mange fine innlegg</p>
@@ -49,5 +49,19 @@
 	<div id="logout_window" title="Er du sikker på at du vil logge ut?" style="display:none;">
 			<button type="button" id="logout_submit" name="logout">Ja</button>
 			<button type="button" id="logout_cancel" name="logout">Avbryt</button>	       
+	</div>
+	
+	<div id="lightbox" style="display:none;">
+			
+	</div><!-- end of lightbox -->
+	
+	<div id="panel" style="display:none;"> 
+		<label for="title_label">Tittel: </label> <br />
+		<input type="text" id="post_title" name="post_title" value=""  /> <br /><br />
+		<label for="in_text_label">Innlegg:</label> <br />
+		<textarea id="in_text"></textarea>
+		<br />
+		<button id="save_post_btn">Lagre</button>
+		<button id="close_btn">Lukk</button>
 	</div>
 </div>
