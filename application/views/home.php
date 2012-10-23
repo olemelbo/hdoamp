@@ -1,6 +1,7 @@
 <div id="wrap">
 	<div id="header">
-		<div class="logo"><h1><a href="<?php echo site_url(); ?>">HiG Debatt</a></h1></div>
+		<div id="logo"><h1><a href="<?php echo site_url(); ?>">HiG<span style="font-weight: normal;"> Debatt</span></a></h1>
+		</div><!-- #logo -->
 		<?php
 			$session = $this->session->userdata('uid');
 			if($session == true) {
@@ -12,20 +13,25 @@
 				foreach ($query->result_array() as $row) { $fnavn = $row['fnavn']; }
 				foreach ($query->result_array() as $row) { $enavn = $row['enavn']; }
 				
-				echo "<div id='user_profile'><h3><a href='#'>" . $fnavn . " " . $enavn ."</a></h3></div>";
-				
 				echo "<div id='logout'><h3><a href='#'>Logg ut</a></h3></div>";
+				echo "<div id='user_profile'><h3><a href='#'>" . $fnavn . " " . $enavn . " | " ."</a></h3></div>";
+				
 			} else {
 				echo "<div id='login'><h3><a href='#'>Logg inn</a></h3></div>";
 			}
 		?>
-		
-		<p class="slogan">Husk å være snill og grei, ellers blir det ingen debatt på deg!</p>
-	</div><!-- end header-->
-
-	<div id="content">
+	</div><!-- end header-->	
+	
+	<div id="pen-wrapper">
 		<div id="pen-icon">
 		</div>
+		<div id="slogan">
+			<p>Husk å være snill og grei, ellers blir det ingen debatt på deg!</p>
+		</div><!-- #slogan -->
+	</div>
+	
+
+	<div id="content">
 		<p>Mange fine innlegg</p>
 	</div>
 	<div id="sidebar">

@@ -1,4 +1,6 @@
 body {
+font-family: Helvetica, Tahoma, Arial, sans-serif;
+color: #b82f11;
 }
 
 #wrap {
@@ -10,9 +12,12 @@ body {
 
 #header {
 	width: 100%;
+	height: 18%;
 	margin-left: auto;
 	margin-right: auto;
 	color: #ba330d;
+	border-bottom: 4px solid black;
+	margin-bottom: 20px;
 }
 
 #wrap {
@@ -23,19 +28,26 @@ body {
 }
 
 #content {
-	width: 73%;
+	width: 75%;
 	float: left;
 	background-color: #e6e6e6;
+}
+
+#pen-wrapper {
+	width: 100%;
+	height: 13%;
 }
 
 #pen-icon {
 	background: url(../images/pen.png);
 	width: 80px;
 	height: 80px;
+	float: left;
 }
 
 #sidebar {
-	width: 23%;
+	width: 22%;
+	height: 30%;
 	float: right;
 	background-color: #e6e6e6;
 }
@@ -48,15 +60,45 @@ body {
 	background-image: url(../images/footer_bg.jpg); 
 	background-repeat: repeat-x;}
 
-.logo {
+#logo {
 	float: left;	
+}
+
+#logo h1 {
+	font-size: 3.7em;
 }
 
 #login, #register, #logout {
 	float: right;
+	margin-left: 3px;
+}
+
+#user_profile {
+	float: right;
 }
 
 
-p.slogan {
+#slogan {
 	color: #636363;
+	text-align: center;
 }
+
+#slogan p {
+	font-size: 1.2em;
+}
+
+#logout a:link, #logout a:visited, #logout a:hover, #logout a:active {
+	color: #000;
+}
+
+#user_profile a:link, #user_profile a:visited, #user_profile a:hover, #user_profile a:active {
+	color: #000;
+}
+
+a:link, a:visited, a:hover, a:active {
+	text-decoration:none;
+	color: #b82f11;
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+}
+a:hover {text-decoration:underline;}
+a:active {text-decoration:underline;}
