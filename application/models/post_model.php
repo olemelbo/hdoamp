@@ -1,9 +1,7 @@
 ﻿<?php
 class Post_model extends CI_Model {
 	private $user_id;
-	function setNewPost($_POST) {		
-		$title = $_POST['title'];
-		$in_text = $_POST['in_text'];
+	function setNewPost($title,  $in_text) {		
 		$post_data = array(
 			'tittel' => $title, 
 			'in_text' => $in_text,

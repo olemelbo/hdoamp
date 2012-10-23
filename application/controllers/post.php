@@ -8,7 +8,7 @@ class Post extends CI_Controller {
 
 	function validate_post() {
 		$this->load->model('post_model');
-		$this->post_model->setNewPost($_POST);
+		$this->post_model->setNewPost($_POST['title'], $_POST['in_text']);
 	}		
 }
 ?>
