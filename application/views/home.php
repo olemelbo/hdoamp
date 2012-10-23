@@ -68,6 +68,7 @@
 	</div><!-- end of lightbox -->
 	
 	<div id="panel" style="display:none;"> 
+		<h3>Skriv et nytt innlegg</h3>
 		<label for="title_label">Tittel: </label> <br />
 		<input type="text" id="post_title" name="post_title" value=""  /> <br /><br />
 		<label for="in_text_label">Innlegg:</label> <br />

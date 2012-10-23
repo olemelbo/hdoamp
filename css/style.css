@@ -95,6 +95,11 @@ color: #b82f11;
 	color: #000;
 }
 
+#in_text {
+	height:257px;
+	width:525px;
+}
+
 a:link, a:visited, a:hover, a:active {
 	text-decoration:none;
 	color: #b82f11;

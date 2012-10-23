@@ -4,7 +4,6 @@ jQuery(document).ready(function($){
 	});
 	
 	var siteURL = $("#siteurl p").text();
-	alert(siteURL);
 	$("#save_post_btn").click(function() {
 		var data = { 
 			title : $("input#post_title").val(),
