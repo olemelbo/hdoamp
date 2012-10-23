@@ -28,6 +28,12 @@ body {
 	background-color: #e6e6e6;
 }
 
+#pen-icon {
+	background: url(../images/pen.png);
+	width: 80px;
+	height: 80px;
+}
+
 #sidebar {
 	width: 23%;
 	float: right;

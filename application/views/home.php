@@ -24,6 +24,8 @@
 	</div><!-- end header-->
 
 	<div id="content">
+		<div id="pen-icon">
+		</div>
 		<p>Mange fine innlegg</p>
 	</div>
 	<div id="sidebar">

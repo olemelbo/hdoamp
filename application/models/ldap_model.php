@@ -92,11 +92,16 @@ class Ldap_model extends CI_Model {
 	}
 	
 	function addUser($uid) {
+		echo "Kjører add";
 		$userDetails = $this->getByUid($uid);
 		$current_time = Date("Y-m-d H:i:s");
-		$sql = "INSERT INTO bruker (studnr, fnavn, enavn, email, department, sist_innlogget) VALUES (?, ?, ?,?,?,?)";
+		print_r($userDetails);
+		$sql = "INSERT INTO bruker (studnr, fnavn, enavn, email, department, sist_innlogget) VALUES (?, ?, ?, ?, ?, ?)";
 		$this->db->query($sql, array($uid,$userDetails['givenname'], $userDetails['surename'], $userDetails['email'], $userDetails['department'], $current_time));
+		$errtxt = $this->db->_error_message();
+		echo $errtxt;
 	}
+	
 	
 	function updateUser($uid) {
 		$current_time = Date("Y-m-d H:i:s");
