@@ -31,7 +31,7 @@
 		</div><!-- #slogan -->
 	</div>
 
-	<div id="content">
+	<div id="content_post">
 		<?php 
 			$this->db->select("*");
 			$this->db->from('innlegg');
@@ -45,7 +45,7 @@
 					<p><?php echo $post['in_text'] ?></p>
 				</div>
 		<?php endforeach; ?>
-	</div>
+	</div><!--End content -->
 	<div id="sidebar">
 		<p>Masse artig innhold</p>
 	</div>

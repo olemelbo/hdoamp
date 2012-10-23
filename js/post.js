@@ -4,6 +4,7 @@ jQuery(document).ready(function($){
 	});
 	
 	var siteURL = $("#siteurl p").text();
+	alert(siteURL);
 	$("#save_post_btn").click(function() {
 		var data = { 
 			title : $("input#post_title").val(),
@@ -20,6 +21,7 @@ jQuery(document).ready(function($){
 					data = $.parseJSON(data);
 					if(data.response == "ok") {
 						$("#lightbox, #panel").fadeOut(300);
+						$("#content_post").load(siteURL + " #content_post");
 					} else {
 						alert(data.error);
 					}
