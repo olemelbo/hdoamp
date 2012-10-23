@@ -32,7 +32,19 @@
 	</div>
 
 	<div id="content">
-		<p>Mange fine innlegg</p>
+		<?php 
+			$this->db->select("*");
+			$this->db->from('innlegg');
+			$this->db->order_by("id", "desc");
+			$query = $this->db->get();
+			
+		?>	
+		<?php foreach ($query->result_array() as $post) : ?>
+				<div class="post_<?php echo $post['id']; ?>">
+					<h3><?php echo $post['tittel'] ?></h3>
+					<p><?php echo $post['in_text'] ?></p>
+				</div>
+		<?php endforeach; ?>
 	</div>
 	<div id="sidebar">
 		<p>Masse artig innhold</p>
