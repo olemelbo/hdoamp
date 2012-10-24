@@ -96,11 +96,19 @@
 		<div id="user_credentials">
 			<h3><?php echo $fnavn . " " . $enavn; ?></h3>
 			<p><?php echo $department; ?></p>
+			<p>Sist innlogget: <?php echo $last_used; ?></p>
+			<?php 
+				$this->db->select('antall_poeng');
+				$this->db->from('poengtabell');
+				$this->db->where('user_id', $id);
+				$query = $this->db->get();
+				
+				foreach ($query->result_array() as $row) { $score = $row['antall_poeng']; }
+			?>
+			<p>Poengsum: <?php if(!empty($score)) { echo $score; } else { echo "0"; } ?></p>
 			<form method="post" action="#" id="login_credentials">
 				<label for="email">Epost: </label> <br />
-				<input type="text" id="user_email" name="user_email" value="<?php echo $email; ?>" /> <br /><br />
-				<label for="upload_profile_picture">Last opp et nytt profilbilde: </label> <br />
-				<input type="file" name="upload_profile_picture" id="upload_profile_picture" />
+				<input type="email" id="user_email" name="user_email" value="<?php echo $email; ?>" /> 
 			</form>
 		</div>
 		<div id="profile_buttons">

@@ -104,6 +104,10 @@ color: #b82f11;
 	width:525px;
 }
 
+#profile_buttons {
+	padding-top: 10px;
+}
+
 a:link, a:visited, a:hover, a:active {
 	text-decoration:none;
 	color: #b82f11;
