@@ -5,13 +5,20 @@
 		<?php
 			$session = $this->session->userdata('uid');
 			if($session == true) {
-				$this->db->select('fnavn,enavn');
+				$this->db->select('*');
 				$this->db->from('bruker');
 				$this->db->where('studnr', $session);
 				$query = $this->db->get();
 				
+				foreach ($query->result_array() as $row) { $id = $row['id']; }
+				foreach ($query->result_array() as $row) { $studnr = $row['studnr']; }
 				foreach ($query->result_array() as $row) { $fnavn = $row['fnavn']; }
 				foreach ($query->result_array() as $row) { $enavn = $row['enavn']; }
+				foreach ($query->result_array() as $row) { $email = $row['email']; }
+				foreach ($query->result_array() as $row) { $image_link = $row['image_link']; }
+				foreach ($query->result_array() as $row) { $department = $row['department']; }
+				foreach ($query->result_array() as $row) { $last_used = $row['sist_innlogget']; }
+				
 				
 				echo "<div id='logout'><h3><a href='#'>Logg ut</a></h3></div>";
 				echo "<div id='user_profile'><h3><a href='#'>" . $fnavn . " " . $enavn . " | " ."</a></h3></div>";
@@ -76,5 +83,30 @@
 		<br />
 		<button id="save_post_btn">Lagre</button>
 		<button id="close_btn">Lukk</button>
+	</div>
+	
+	<div id="user_panel" style="display:none;">
+		<div id="profile_picture">
+			<?php if(empty($image_link)) : ?>
+				<img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picrure" />	
+			<?php else : ?>
+			
+			<?php endif; ?>
+		</div>
+		<div id="user_credentials">
+			<h3><?php echo $fnavn . " " . $enavn; ?></h3>
+			<p><?php echo $department; ?></p>
+			<form method="post" action="#" id="login_credentials">
+				<label for="email">Epost: </label> <br />
+				<input type="text" id="user_email" name="user_email" value="<?php echo $email; ?>" /> <br /><br />
+				<label for="upload_profile_picture">Last opp et nytt profilbilde: </label> <br />
+				<input type="file" name="upload_profile_picture" id="upload_profile_picture" />
+			</form>
+		</div>
+		<div id="profile_buttons">
+			
+			<button id="save_userprofile_btn">Lagre</button>
+			<button id="close_userprofile_btn">Lukk</button>
+		</div>
 	</div>
 </div>

@@ -17,7 +17,6 @@ jQuery(document).ready(function($){
 				success : function (data) {
 					data = $.parseJSON(data);
 					if(data.response == "ok") {
-						alert(data.msg);
 						location.reload();
 					} else {
 						alert(data.error);

@@ -11,7 +11,7 @@
 }
 
 
-#panel {  
+#panel, #user_panel {  
  display:none;  
  position:fixed;  
  top:100px;  

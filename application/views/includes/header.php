@@ -12,6 +12,7 @@
 	<script language="javascript" src="<?php echo base_url(); ?>/js/login.js"></script>
 	<script language="javascript" src="<?php echo base_url(); ?>/js/logout.js"></script>
 	<script language="javascript" src="<?php echo base_url(); ?>/js/post.js"></script>
+	<script language="javascript" src="<?php echo base_url(); ?>/js/user_profile.js"></script>
 	<script language="javascript" src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 	
 </head>

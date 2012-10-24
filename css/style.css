@@ -77,6 +77,10 @@ color: #b82f11;
 	float: right;
 }
 
+#profile_picture {
+	float: left;
+	margin-right: 20px;
+}
 
 #slogan {
 	color: #636363;
