@@ -23,6 +23,8 @@ class User_model extends CI_Model {
 		foreach ($query->result_array() as $row) { $this->image_link = $row['image_link']; }
 		foreach ($query->result_array() as $row) { $this->department = $row['department']; }
 		foreach ($query->result_array() as $row) { $this->last_used = $row['sist_innlogget']; }
+		
+		$this->setUserScore();
 
 	}
 	
@@ -72,6 +74,6 @@ class User_model extends CI_Model {
 		$this->db->from('poengtabell');
 		$this->db->where('user_id', $this->id);
 		$query = $this->db->get();
-		foreach ($query->result_array() as $row) { $this->score = $row['antall_poeng ']; }
+		foreach ($query->result_array() as $row) { $this->score = $row['antall_poeng']; }
 	}
 }
