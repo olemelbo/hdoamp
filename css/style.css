@@ -4,7 +4,7 @@ body {
 }
 
 p, label {
-	font-size: 12px;
+	font-size: 14px;
 }
 
 #wrap {
@@ -12,6 +12,14 @@ p, label {
 
 .clear_both {
 	clear:both;
+}
+
+#user_last_posts{
+	margin-top: 15px;
+}
+
+#user_last_posts p {
+	font-weight: bold;
 }
 
 #header {
@@ -82,7 +90,7 @@ p, label {
 }
 
 #profile_picture {
-	float: left;
+	float: right;
 	margin-right: 20px;
 }
 

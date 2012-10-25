@@ -19,13 +19,13 @@
 		<div class="post">
 			<div id="post_<?php echo $post['id']; ?>">
 				<?php if(empty($user_image)) : ?>
-					<img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" />	
+					<a href='post_<?php echo $post['id']; ?>'><img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" /></a>	
 				<?php else : ?>
 				
 				<?php endif; ?>
-				<h3><?php  echo $post['tittel'] ?></h3>
+				<h2><a href="post_<?php echo $post['id']; ?>"><?php  echo $post['tittel'] ?></a></h2>
 				<?php if(!empty($post['hashtags'])) : ?>
-					<p class="hashtags"><?php foreach($post['hashtags'] as $p) { echo "#".$p . " "; } ?> </p>
+					<p class="hashtags"><?php foreach($post['hashtags'] as $p) { echo "<a href='#'>#".$p . " " . "</a>"; } ?> </p>
 				<?php endif; ?>
 			</div><!--end divpost-->
 		</div><!--end classpost-->
@@ -75,6 +75,14 @@
 				<label for="email">Epost: </label> 
 				<input type="email" id="user_email" name="user_email" value="<?php echo $user_email; ?>" /> 
 			</form>
+			<div id="user_last_posts">
+				<p>Dine siste innlegg:</p>
+				<ul>
+					<?php foreach($user_posts as $key => $value) : ?>
+						<li><a href="post_<?php echo $key ?>"><?php echo $value; ?></a></li>
+					<?php endforeach; ?>
+				</ul>
+			</div>
 		</div>
 		<div id="profile_buttons">
 			

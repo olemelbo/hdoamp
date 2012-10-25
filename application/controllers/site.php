@@ -15,6 +15,13 @@ class Site extends CI_Controller {
 			$data['user_department'] = $this->user_model->getUserDepartment();
 			$data['user_last_logged_in'] = $this->user_model->getLastUsed();
 			$data['user_score'] = $this->user_model->getUserScore();
+			$user_query = $this->user_model->getUserPosts();
+			
+			foreach ($user_query->result_array() as $upost) {
+				$data['user_posts'][$upost["id"]] = $upost['id'];
+				$data['user_posts'][$upost["id"]] = $upost["tittel"];
+			}	
+			
 			//Posts
 			$this->load->model('post_model');
 			$query = $this->post_model->getAllPosts();

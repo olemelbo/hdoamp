@@ -69,6 +69,12 @@ class User_model extends CI_Model {
 		return $this->score;
 	}
 	
+	function getUserPosts() {
+		$sql = "SELECT id, tittel FROM innlegg WHERE user_id = ? GROUP BY id DESC LIMIT 0, 10";
+		$result = $this->db->query($sql, $this->id);             
+		return $result;
+	}
+	
 	function instantiateUserScore() {
 		$this->db->select('antall_poeng');
 		$this->db->from('poengtabell');
