@@ -1,13 +1,17 @@
 body {
-font-family: Helvetica, Tahoma, Arial, sans-serif;
-color: #b82f11;
+	font-family: Helvetica, Tahoma, Arial, sans-serif;
+	color: #b82f11;
+}
+
+p, label {
+	font-size: 12px;
 }
 
 #wrap {
 }
 
 .clear_both {
-	float: clear;
+	clear:both;
 }
 
 #header {
@@ -53,8 +57,7 @@ color: #b82f11;
 }
 
 #footer {
-	position: fixed; 
-	bottom: 0; 
+	clear:both;
 	height: 100px; 
 	width: 100%; 
 	background-image: url(../images/footer_bg.jpg); 
@@ -66,6 +69,7 @@ color: #b82f11;
 
 #logo h1 {
 	font-size: 3.7em;
+	color: #b82f11;
 }
 
 #login, #register, #logout {
@@ -105,7 +109,21 @@ color: #b82f11;
 }
 
 #profile_buttons {
-	padding-top: 10px;
+	padding-top: 50px;
+}
+
+.post {
+	margin: 20px;
+}
+
+.post img {
+	float:left;
+	height: 100px;
+	width: 100px;
+	padding-right: 20px;
+}
+
+.post_title {
 }
 
 a:link, a:visited, a:hover, a:active {

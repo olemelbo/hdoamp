@@ -16,10 +16,17 @@
 
 	<div id="content_post">
 		<?php foreach ($posts->result_array() as $post) : ?>
-				<div class="post_<?php echo $post['id']; ?>">
-					<h3><?php echo $post['tittel'] ?></h3>
-					<p><?php echo $post['in_text'] ?></p>
+				<div class="post">
+					<div id="post_<?php echo $post['id']; ?>">
+						<?php if(empty($user_image)) : ?>
+							<img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picrure" />	
+						<?php else : ?>
+				
+						<?php endif; ?>
+						<h3 class="post_title"><?php echo $post['tittel'] ?></h3>
+					</div>
 				</div>
+				<div class="clear_both"></div>
 		<?php endforeach; ?>
 		
 	</div><!--End content post -->
@@ -40,9 +47,11 @@
 		<h3>Skriv et nytt innlegg</h3>
 		<label for="title_label">Tittel: </label> <br />
 		<input type="text" id="post_title" name="post_title" value=""  /> <br /><br />
+		<label for="hash_tags">Hashtags:</label><br />
+		<input type="text" id="hash_tags" name="hash_tags" value="" /> <br /> <br />
 		<label for="in_text_label">Innlegg:</label> <br />
 		<textarea id="in_text"></textarea>
-		<br />
+		<br /><br />
 		<button id="save_post_btn">Lagre</button>
 		<button id="close_btn">Lukk</button>
 	</div>
@@ -61,7 +70,7 @@
 			<p>Sist innlogget: <?php echo $user_last_logged_in; ?></p>
 			<p>Poengsum: <?php if(!empty($user_score)) { echo $user_score; } else { echo "0"; } ?></p>
 			<form method="post" action="#" id="login_credentials">
-				<label for="email">Epost: </label> <br />
+				<label for="email">Epost: </label> 
 				<input type="email" id="user_email" name="user_email" value="<?php echo $user_email; ?>" /> 
 			</form>
 		</div>

@@ -15,7 +15,7 @@ class Post extends CI_Controller {
 			die();
 			return false;
 		}
-		$this->post_model->setNewPost($_POST['title'], $_POST['in_text']);
+		$this->post_model->setNewPost($_POST['title'], $_POST['hash_tags'], $_POST['in_text']);
 	}		
 }
 ?>

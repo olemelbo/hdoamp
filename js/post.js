@@ -7,8 +7,12 @@ jQuery(document).ready(function($){
 	$("#save_post_btn").click(function() {
 		var data = { 
 			title : $("input#post_title").val(),
-			in_text : $("textarea#in_text").val()
+			hash_tags : $("input#hash_tags").val(),
+			in_text : $("textarea#in_text").val()	
 		};
+		
+		alert(data.hash_tags);
+		
 		if(data['title'] == "") { alert("Du må skrive inn tittel på innlegget"); }
 		if(data['in_text'] == "") { alert("Du må skrive inn tekst i innlegget"); }
 	
