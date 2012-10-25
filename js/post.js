@@ -11,8 +11,6 @@ jQuery(document).ready(function($){
 			in_text : $("textarea#in_text").val()	
 		};
 		
-		alert(data.hash_tags);
-		
 		if(data['title'] == "") { alert("Du må skrive inn tittel på innlegget"); }
 		if(data['in_text'] == "") { alert("Du må skrive inn tekst i innlegget"); }
 	

@@ -15,20 +15,23 @@
 	</div>
 
 	<div id="content_post">
-		<?php foreach ($posts->result_array() as $post) : ?>
-				<div class="post">
-					<div id="post_<?php echo $post['id']; ?>">
-						<?php if(empty($user_image)) : ?>
-							<img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picrure" />	
-						<?php else : ?>
-				
-						<?php endif; ?>
-						<h3 class="post_title"><?php echo $post['tittel'] ?></h3>
-					</div>
-				</div>
-				<div class="clear_both"></div>
-		<?php endforeach; ?>
 		
+		<?php foreach($posts as $post) : ?>
+		<div class="post">
+			<div id="post_">
+				<?php if(empty($user_image)) : ?>
+					<img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" />	
+				<?php else : ?>
+				
+				<?php endif; ?>
+				<h3><?php  echo $post['tittel'] ?></h3>
+				<?php if(!empty($post['hashtags'])) : ?>
+					<p class="hashtags"><?php foreach($post['hashtags'] as $p) { echo "#".$p . " "; } ?> </p>
+				<?php endif; ?>
+			</div><!--end divpost-->
+		</div><!--end classpost-->
+		<div class="clear_both"></div>
+		<?php endforeach; ?>
 	</div><!--End content post -->
 	<div id="sidebar">
 		<p>Masse artig innhold</p>

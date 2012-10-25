@@ -9,12 +9,12 @@ class Post_model extends CI_Model {
 			$response['error'] = "Du må skrive inn tittel og tekst";
 			die();
 		}
-		
+	
 		$post_data = array(
 			'tittel' => $title, 
 			'in_text' => $in_text,
-			'feedback_id' => 1,
-			'user_id' => $this->getUserId()
+			'user_id' => $this->getUserId(),
+			'date' => date("Y-m-d H:i:s") 
 		);
 		
 		$this->db->insert('innlegg', $post_data);
@@ -55,10 +55,13 @@ class Post_model extends CI_Model {
 	}
 	
 	function getAllPosts() {
-		$this->db->select("*");
-		$this->db->from('innlegg');
-		$this->db->order_by("id", "desc");
-		$query = $this->db->get();
+		$sql = "SELECT i.id, i.tittel, i.in_text, i.user_id, i.date, h.hash_id, h.hashtag
+		FROM INNLEGG i
+		LEFT JOIN HASHTAG h
+		ON i.id=h.innlegg_id
+		ORDER BY i.id DESC";
+		$query = $this->db->query($sql, array());
+	
 		return $query;
 	}
 	

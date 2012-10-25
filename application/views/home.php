@@ -11,12 +11,25 @@
 	</div>
 
 	<div id="content_post">
-		<?php foreach ($posts->result_array() as $post) : ?>
-				<div class="post_<?php echo $post['id']; ?>">
-					<h3><?php echo $post['tittel'] ?></h3>
-					<p><?php echo $post['in_text'] ?></p>
-				</div>
+		<div id="content_post">
+		
+		<?php foreach($posts as $post) : ?>
+		<div class="post">
+			<div id="post_">
+				<?php if(empty($user_image)) : ?>
+					<img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" />	
+				<?php else : ?>
+				
+				<?php endif; ?>
+				<h3><?php  echo $post['tittel'] ?></h3>
+				<?php if(!empty($post['hashtags'])) : ?>
+					<p class="hashtags"><?php foreach($post['hashtags'] as $p) { echo "#".$p . " "; } ?> </p>
+				<?php endif; ?>
+			</div><!--end divpost-->
+		</div><!--end classpost-->
+		<div class="clear_both"></div>
 		<?php endforeach; ?>
+	</div><!--End content post -->
 		
 	</div><!--End content post -->
 	<div id="sidebar">

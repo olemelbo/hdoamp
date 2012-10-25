@@ -17,15 +17,35 @@ class Site extends CI_Controller {
 			$data['user_score'] = $this->user_model->getUserScore();
 			//Posts
 			$this->load->model('post_model');
-			$data["posts"] = $this->post_model->getAllPosts();
+			$query = $this->post_model->getAllPosts();
+			foreach ($query->result_array() as $post) {
+				$data["posts"][$post['id']]['tittel'] = $post['tittel']; 
+				$data["posts"][$post['id']]['in_text'] = $post['in_text'];
+				$data["posts"][$post['id']]['user_id'] = $post['user_id'];
+				$data["posts"][$post['id']]['date'] = $post['date'];
+				if(!empty($post['hashtag'])) {
+					$data["posts"][$post['id']]['hashtags'][] = $post['hashtag'];
+				}
+			}
 			//Content
+			
 			$data["main_content"] = "restricted/home_restricted";
 			$this->load->view("includes/template", $data);
 		} else {
 			$data["main_content"] = "home";
 			$this->load->model('post_model');
-			$data["posts"] = $this->post_model->getAllPosts();
-			$this->load->view("includes/template", $data);	
+			$query = $this->post_model->getAllPosts();
+			foreach ($query->result_array() as $post) {
+				$data["posts"][$post['id']]['tittel'] = $post['tittel']; 
+				$data["posts"][$post['id']]['in_text'] = $post['in_text'];
+				$data["posts"][$post['id']]['user_id'] = $post['user_id'];
+				$data["posts"][$post['id']]['date'] = $post['date'];
+				if(!empty($post['hashtag'])) {
+					$data["posts"][$post['id']]['hashtags'][] = $post['hashtag'];
+				}
+			}
+			
+			$this->load->view("includes/template", $data);
 		}
 	}
 
