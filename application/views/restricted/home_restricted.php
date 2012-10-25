@@ -15,10 +15,9 @@
 	</div>
 
 	<div id="content_post">
-		
 		<?php foreach($posts as $post) : ?>
 		<div class="post">
-			<div id="post_">
+			<div id="post_<?php echo $post['id']; ?>">
 				<?php if(empty($user_image)) : ?>
 					<img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" />	
 				<?php else : ?>
