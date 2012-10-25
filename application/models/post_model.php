@@ -40,6 +40,15 @@ class Post_model extends CI_Model {
 		{ $user_id = $row['id']; }
 		return $user_id;
 	}
+	
+	function getAllPosts() {
+		$this->db->select("*");
+		$this->db->from('innlegg');
+		$this->db->order_by("id", "desc");
+		$query = $this->db->get();
+		return $query;
+	}
+	
 }
 
 ?>
