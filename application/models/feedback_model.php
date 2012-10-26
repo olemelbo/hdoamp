@@ -4,6 +4,23 @@ class Feedback_model extends CI_Model {
 	function validateFeedback($post_id, $agree, $disagree, $relevant, $informative, $well_written,$unserious) {
 		$this->post_id = $post_id;
 		$this->user_id = $this->getUserId();
+		$fistFeedback = $this->firstFeedBack();
+		$noVotingOnYourself = $this->noVotingOnYourself();
+		
+		if(!$fistFeedback) {
+			$response['response'] = "error";
+			$response['error'] = "Du kan bare gi feedback på et innlegg en gang";
+			echo json_encode($response);
+			return false;
+		}
+		
+		if(!$noVotingOnYourself) {
+			$response['response'] = "error";
+			$response['error'] = "Du kan ikke gi feedback på egene innlegg";
+			echo json_encode($response);
+			return false;
+		}
+		
 		if($agree == 1 && $disagree == 1) {
 			$response['response'] = "error";
 			$response['error'] = "Du må enten velge enig eller uenig";
@@ -62,6 +79,26 @@ class Feedback_model extends CI_Model {
 		foreach ($query->result_array() as $row) 
 		{ $user_id = $row['id']; }
 		return $user_id;
+	}
+	
+	function firstFeedBack() {
+		$sql = "SELECT id FROM innlegg_feedback WHERE innlegg_id =? AND user_id =?";
+		$result = $this->db->query($sql, array($this->post_id, $this->user_id));
+		if($result->num_rows() > 0) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+	
+	function noVotingOnYourself() {
+		$sql = "SELECT id, user_id FROM innlegg WHERE id = ? AND user_id = ?";
+		$result = $this->db->query($sql, array($this->post_id, $this->user_id));
+		if($result->num_rows() > 0) {
+			return false;
+		} else {
+			return true;
+		}
 	}
 }
 	
