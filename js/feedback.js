@@ -47,7 +47,6 @@ jQuery(document).ready(function($){
 		} else if(well_written == 1 && unserious == 1) {
 			alert("Innlegget kan ikke være godt skrevet, men samtidig useriøst");
 		} else {
-			alert(data);
 			$.ajax ({
 				url : siteURL + "/feedback/validate_feedback",
 				type : 'POST',
@@ -56,6 +55,7 @@ jQuery(document).ready(function($){
 					data = $.parseJSON(data);
 					if(data.response == "ok") {
 						alert(data.msg);
+						$("#lightbox, .feedback_panel").fadeOut(300);
 					} else {
 						alert(data.error);
 					}

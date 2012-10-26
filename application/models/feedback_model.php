@@ -4,7 +4,9 @@ class Feedback_model extends CI_Model {
 	function validateFeedback($post_id, $agree, $disagree, $relevant, $informative, $well_written,$unserious) {
 		$this->post_id = $post_id;
 		$this->user_id = $this->getUserId();
+		$fistFeedback = true;
 		$fistFeedback = $this->firstFeedBack();
+		$noVotingOnYourself = true;
 		$noVotingOnYourself = $this->noVotingOnYourself();
 		
 		if(!$fistFeedback) {
@@ -65,7 +67,7 @@ class Feedback_model extends CI_Model {
 					$this->db->query($sql, array($this->post_id, $this->user_id, $key));
 			}
  			$response['response'] = "ok";
-			$response['error'] = "Alt er ok";
+			$response['msg'] = "Feedback ble lagret";
 			echo json_encode($response);
 		}
 	}
