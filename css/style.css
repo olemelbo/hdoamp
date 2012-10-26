@@ -10,6 +10,10 @@ p, label {
 #wrap {
 }
 
+#user_credentials { 
+	margin-left: 50px;
+}
+
 .clear_both {
 	clear:both;
 }
@@ -91,7 +95,7 @@ p, label {
 
 #profile_picture {
 	float: right;
-	margin-right: 20px;
+	margin-right: 50px;
 }
 
 #slogan {
@@ -121,7 +125,19 @@ p, label {
 }
 
 .post {
+	position:relative;
 	margin: 20px;
+	background-color:#9B9494;
+	height: 250px;
+	width: 70%;
+}
+
+.post_bar {
+	position:absolute;
+	bottom:0px;
+	height:20%;
+	background-color:black;
+	width:100%;
 }
 
 .post img {

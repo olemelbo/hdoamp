@@ -19,14 +19,23 @@
 		<div class="post">
 			<div id="post_<?php echo $post['id']; ?>">
 				<?php if(empty($user_image)) : ?>
-					<a href='post_<?php echo $post['id']; ?>'><img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" /></a>	
+					<div id="post_picture"><a href='post_<?php echo $post['id']; ?>'><img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" /></a></div>	
 				<?php else : ?>
 				
 				<?php endif; ?>
 				<h2><a href="post_<?php echo $post['id']; ?>"><?php  echo $post['tittel'] ?></a></h2>
+				
 				<?php if(!empty($post['hashtags'])) : ?>
 					<p class="hashtags"><?php foreach($post['hashtags'] as $p) { echo "<a href='#'>#".$p . " " . "</a>"; } ?> </p>
 				<?php endif; ?>
+				
+				<p><?php echo $truncated = substr($post['in_text'], 0, 300) . '...' ?></p>
+				<div class="post_bar">
+					<button type="button" id="post_feedback">Feedback</button>
+					<button type="button" id="post_statistic">Statestikk</button>
+					<button type="button" id="post_newcomment">Skriv kommentar</button>
+					<button type="button" id="post_morecomments">Se kommentarer</button>
+				</div>
 			</div><!--end divpost-->
 		</div><!--end classpost-->
 		<div class="clear_both"></div>
