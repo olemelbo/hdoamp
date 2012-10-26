@@ -13,8 +13,7 @@ jQuery(document).ready(function($){
 				success : function (data) {
 					data = $.parseJSON(data);
 					if(data.response == "ok") {
-						alert(data.msg);
-						$("#lightbox, .feedback_panel").fadeOut(300);
+						
 					} else {
 						alert(data.error);
 					}
