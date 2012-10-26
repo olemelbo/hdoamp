@@ -140,9 +140,13 @@ p, label {
 	width:100%;
 }
 
+.post_truncated {
+	width: 90%;
+}
+
 .post img {
 	float:left;
-	height: 100px;
+	height: 170px;
 	width: 100px;
 	padding-right: 20px;
 }
@@ -152,6 +156,10 @@ p, label {
 }
 
 .post_title {
+}
+
+.feedback_buttons {
+	margin-top:20px;
 }
 
 a:link, a:visited, a:hover, a:active {

@@ -4,6 +4,7 @@
  opacity:0.8;  
  position:absolute;  
  top:0px;  
+ bottom:0px;
  left:0px;  
  min-width:100%;  
  min-height:100%;  
@@ -11,7 +12,7 @@
 }
 
 
-#panel, #user_panel {  
+#panel, #user_panel, .feedback_panel {  
  display:none;  
  position:fixed;  
  top:100px;  
@@ -22,4 +23,8 @@
  padding:10px 15px 10px 15px;  
  border:2px solid #CCCCCC;  
  z-index:1001;  
+}
+
+.feedback_panel {  
+	width: 800px;	
 }

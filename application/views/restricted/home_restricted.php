@@ -29,12 +29,13 @@
 					<p class="hashtags"><?php foreach($post['hashtags'] as $p) { echo "<a href='#'>#".$p . " " . "</a>"; } ?> </p>
 				<?php endif; ?>
 				
-				<p><?php echo $truncated = substr($post['in_text'], 0, 300) . '...' ?></p>
+				<p class="post_truncated"><?php echo $truncated = substr($post['in_text'], 0, 300) . '...' ?></p>
 				<div class="post_bar">
-					<button type="button" id="post_feedback">Feedback</button>
-					<button type="button" id="post_statistic">Statestikk</button>
-					<button type="button" id="post_newcomment">Skriv kommentar</button>
-					<button type="button" id="post_morecomments">Se kommentarer</button>
+					<button type="button" class="post_reports">Rapporter</button>
+					<button type="button" class="post_feedback" id="<?php echo $post['id']; ?>">Feedback</button>
+					<button type="button" class="post_statistic" id="<?php echo $post['id']; ?>">Statestikk</button>
+					<button type="button" class="post_newcomment">Skriv kommentar</button>
+					<button type="button" class="post_morecomments">Se kommentarer</button>
 				</div>
 			</div><!--end divpost-->
 		</div><!--end classpost-->
@@ -99,5 +100,27 @@
 			<button id="close_userprofile_btn">Lukk</button>
 		</div>
 		
+	</div>
+	
+	<div class="feedback_panel" style="display:none;">
+		<h1>Gi din feedback til innlegget</h1>
+	<form method="post" action="#" id="post_feedback">
+		<label for="agree">Enig:</label>
+		<input type="checkbox" name="agree" />
+		<label for="relevant">Relevant:</label>
+		<input type="checkbox" name="relevant" />
+		<label for="informative">Informativt:</label>
+		<input type="checkbox" name="informative" />
+		<label for="well_written">Godt skrevet:</label>
+		<input type="checkbox"name="well_written" />
+		<label for="disagree">Uenig:</label>
+		<input type="checkbox" name="disagree" />
+		<label for="unserious">Useriøst:</label>
+		<input type="checkbox" name="unserious" />
+	</form>
+	<div class="feedback_buttons">
+			<button class="save_feedback_btn">Lagre</button>
+			<button class="close_feedback_btn">Lukk</button>
+	</div>
 	</div>
 </div>
