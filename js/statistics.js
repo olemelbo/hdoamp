@@ -75,7 +75,7 @@ jQuery(document).ready(function($){
             				tooltip: {
                 				formatter: function() {
                     			return ''+
-                        		this.x +': '+ this.y +'antall';
+                        		this.x +': '+ this.y;
                 				}
            					},
            					plotOptions: {
