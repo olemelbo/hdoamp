@@ -15,6 +15,7 @@
 	<script language="javascript" src="<?php echo base_url(); ?>js/user_profile.js"></script>
 	<script language="javascript" src="<?php echo base_url(); ?>js/feedback.js"></script>
 	<script language="javascript" src="<?php echo base_url(); ?>js/statistics.js"></script>
+	<script language="javascript" src="<?php echo base_url(); ?>js/highcharts/highcharts.js"></script>
 	<script language="javascript" src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 	
 </head>

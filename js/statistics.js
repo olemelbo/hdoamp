@@ -15,9 +15,9 @@ jQuery(document).ready(function($){
 					if(data.error) {
 						alert(data.error);
 					} else { 
-					
+					 $("#lightbox, .statitics_panel").fadeIn(300);
 					 $.each(data.feedback, function (key, value) {
-           				 alert(value);
+           				
         			 });
 					}
 				}

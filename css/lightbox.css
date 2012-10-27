@@ -12,7 +12,7 @@
 }
 
 
-#panel, #user_panel, .feedback_panel {  
+#panel, #user_panel, .feedback_panel, .statitics_panel {  
  display:none;  
  position:fixed;  
  top:100px;  

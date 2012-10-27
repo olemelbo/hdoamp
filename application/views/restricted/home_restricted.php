@@ -103,23 +103,33 @@
 	
 	<div class="feedback_panel" style="display:none;">
 		<h1>Gi din feedback til innlegget</h1>
-	<form method="post" action="#" id="post_feedback">
-		<label for="agree">Enig:</label>
-		<input type="checkbox" name="agree" />
-		<label for="relevant">Relevant:</label>
-		<input type="checkbox" name="relevant" />
-		<label for="informative">Informativt:</label>
-		<input type="checkbox" name="informative" />
-		<label for="well_written">Godt skrevet:</label>
-		<input type="checkbox"name="well_written" />
-		<label for="disagree">Uenig:</label>
-		<input type="checkbox" name="disagree" />
-		<label for="unserious">Useriøst:</label>
-		<input type="checkbox" name="unserious" />
-	</form>
-	<div class="feedback_buttons">
+		<form method="post" action="#" id="post_feedback">
+			<label for="agree">Enig:</label>
+			<input type="checkbox" name="agree" />
+			<label for="relevant">Relevant:</label>
+			<input type="checkbox" name="relevant" />
+			<label for="informative">Informativt:</label>
+			<input type="checkbox" name="informative" />
+			<label for="well_written">Godt skrevet:</label>
+			<input type="checkbox"name="well_written" />
+			<label for="disagree">Uenig:</label>
+			<input type="checkbox" name="disagree" />
+			<label for="unserious">Useriøst:</label>
+			<input type="checkbox" name="unserious" />
+		</form>
+		<div class="feedback_buttons">
 			<button class="save_feedback_btn">Lagre</button>
 			<button class="close_feedback_btn">Lukk</button>
+		</div>
 	</div>
+	
+	<div class="statitics_panel" style="display:none">
+		<h1>Statistikk for innlegget</h1>
+		<div class="statistics_high_chart_target">
+			
+		</div>
+		<div class="feedback_buttons">
+			<button class="close_statistics_btn">Lukk</button>
+		</div>
 	</div>
 </div>
