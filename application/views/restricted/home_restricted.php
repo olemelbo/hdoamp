@@ -33,8 +33,7 @@
 					<button type="button" class="post_reports">Rapporter</button>
 					<button type="button" class="post_feedback" id="<?php echo $post['id']; ?>">Feedback</button>
 					<button type="button" class="post_statistic" id="<?php echo $post['id']; ?>">Statestikk</button>
-					<button type="button" class="post_newcomment">Skriv kommentar</button>
-					<button type="button" class="post_morecomments">Se kommentarer</button>
+					<a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>">Se kommentarer</a>
 				</div>
 			</div><!--end divpost-->
 		</div><!--end classpost-->

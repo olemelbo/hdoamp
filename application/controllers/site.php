@@ -1,10 +1,11 @@
 <?php
 class Site extends CI_Controller {
 	function index() {
-		if($session = $this->session->userdata('uid')) {
+		$session = $this->session->userdata('uid');
+		if($session) {
 			//User Info
 			$this->load->model('user_model');
-			$this->user_model->instantiate($session);
+			$this->user_model->instantiateUserInfo($session);
 			$data['user_id'] = $this->user_model->getUserId();
 			$data['user_studnr'] = $this->user_model->getUserStudnr();
 			$data['user_fname'] = $this->user_model->getUserFirstName();

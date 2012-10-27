@@ -10,7 +10,7 @@ class User_model extends CI_Model {
 	private $last_used;
 	private $score;
 		
-	function instantiate($studnr) {
+	function instantiateUserInfo($studnr) {
 		$this->db->from('bruker');
 		$this->db->where('studnr', $studnr);
 		$query = $this->db->get();
