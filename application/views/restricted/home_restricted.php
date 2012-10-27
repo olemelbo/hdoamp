@@ -123,9 +123,8 @@
 		</div>
 	</div>
 	
-	<div class="statitics_panel" style="display:none">
-		<h1>Statistikk for innlegget</h1>
-		<div class="statistics_high_chart_target">
+	<div class="statistics_panel" style="display:none">
+		<div id="statistics_high_chart_target">
 			
 		</div>
 		<div class="feedback_buttons">
