@@ -1,11 +1,11 @@
 <?php
 class Statistics_model extends CI_Model {
 	function getChartById($post_id) {
-		$sql = "SELECT feedback FROM innlegg_feedback WHERE innlegg_id =?";
+		$sql = "SELECT id, feedback FROM innlegg_feedback WHERE innlegg_id =?";
 		$query = $this->db->query($sql, array($post_id));
 		if($query->num_rows() > 0) {
 			foreach ($query->result_array() as $row) {
-				$feedback[] = $row['feedback'];
+				$feedback['feedback'][$row['id']] = $row['feedback'];
 			}
 		
 			echo json_encode($feedback);

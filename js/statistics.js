@@ -12,12 +12,15 @@ jQuery(document).ready(function($){
 				data : data,
 				success : function (data) {
 					data = $.parseJSON(data);
-					if(data.response == "ok") {
-						
-					} else {
+					if(data.error) {
 						alert(data.error);
+					} else { 
+					
+					 $.each(data.feedback, function (key, value) {
+           				 alert(value);
+        			 });
 					}
-				}	
+				}
 			}); 
 	});
 });

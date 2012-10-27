@@ -36,7 +36,9 @@ jQuery(document).ready(function($){
 		}
 		
 		//Sjekker logic
-		if(agree == 1 && disagree == 1) {
+		if(agree == 0 && disagree == 0 && relevant == 0 && informative == 0 && well_written == 0 && unserious == 0) {
+			alert("Du må velge en eller fler alternativer for å kunne gi feedback")
+		} else if(agree == 1 && disagree == 1) {
 			alert("Du må enten velge enig eller uenig");
 		} else if(relevant == 1 && unserious) {
 			alert("Du må enten velge relevant eller useriøst");
