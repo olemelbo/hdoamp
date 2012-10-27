@@ -18,11 +18,11 @@
 		<div class="post">
 			<div id="post_<?php echo $post['id']; ?>">
 				<?php if(empty($user_image)) : ?>
-					<div id="post_picture"><a href='post_<?php echo $post['id']; ?>'><img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" /></a></div>	
+					<div id="post_picture"><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>"><img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" /></a></div>	
 				<?php else : ?>
 				
 				<?php endif; ?>
-				<h2><a href="post_<?php echo $post['id']; ?>"><?php  echo $post['tittel'] ?></a></h2>
+				<h2><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>"><?php  echo $post['tittel'] ?></a></h2>
 				
 				<?php if(!empty($post['hashtags'])) : ?>
 					<p class="hashtags"><?php foreach($post['hashtags'] as $p) { echo "<a href='#'>#".$p . " " . "</a>"; } ?> </p>
@@ -87,7 +87,7 @@
 				<p>Dine siste innlegg:</p>
 				<ul>
 					<?php foreach($user_posts as $key => $value) : ?>
-						<li><a href="post_<?php echo $key ?>"><?php echo $value; ?></a></li>
+						<li><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $key?>""><?php echo $value; ?></a></li>
 					<?php endforeach; ?>
 				</ul>
 			</div>

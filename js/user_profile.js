@@ -1,10 +1,10 @@
 jQuery(document).ready(function($) { 
-	$("#user_profile").click(function() { 
+	$("#user_profile").live("click", function(){
 	 	$("#lightbox, #user_panel").fadeIn(300);
 	});
 	
 	var siteURL = $("#siteurl p").text();
-	$("#save_userprofile_btn").click(function() {
+	$("#save_userprofile_btn").live("click", function(){
 		var data = { 
 			email : $("input#user_email").val(),
 		};
@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
 		}); 
 	});
 	
-	$("#close_userprofile_btn").click(function() {
+	$("#close_userprofile_btn").live("click", function(){
 		$("#lightbox, #user_panel").fadeOut(300);
 	});
 });

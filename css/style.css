@@ -132,6 +132,15 @@ p, label {
 	width: 70%;
 }
 
+#post {
+	margin: 20px;
+	background-color:#9B9494;
+}
+
+#post_content p {
+	padding: 20px;
+}
+
 .post_bar {
 	position:absolute;
 	bottom:0px;
@@ -144,11 +153,12 @@ p, label {
 	width: 90%;
 }
 
-.post img {
+.post img, #post_picture img {
 	float:left;
 	height: 170px;
 	width: 100px;
-	padding-right: 20px;
+	padding: 15px;
+	padding-bottom: 0px;
 }
 
 .hashtags {
@@ -160,6 +170,26 @@ p, label {
 
 .feedback_buttons {
 	margin-top:20px;
+}
+#post_author {
+	margin-right: 25px;
+}
+
+#post {
+	width: 55%;
+}
+
+#post_content {
+	padding-left: 10px;
+}
+
+#post_author label {
+	font-weight: bold;
+}
+
+#post_author_credentials {
+	clear:both;
+	padding:20px;
 }
 
 a:link, a:visited, a:hover, a:active {

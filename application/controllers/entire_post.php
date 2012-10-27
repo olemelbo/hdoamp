@@ -7,7 +7,7 @@
 		$session = $this->session->userdata('uid');
 		if($session) {
 			$this->load->model("entire_post_model");
-			$entire_query = $this->entire_post_model->loadEntirePost($this->uri->segment(3));	
+			$entire_query = $this->entire_post_model->getEntirePost($this->uri->segment(3));	
 			foreach ($entire_query->result_array() as $upost) {
 				$data['entire_post']['id'] = $upost['id'];
 				$data['entire_post']['tittel'] = $upost["tittel"];
@@ -15,6 +15,7 @@
 				$data['entire_post']['user_id'] = $upost["user_id"];
 				$data['entire_post']['date'] = $upost["date"];
 			}
+			
 			//User Info
 			$this->load->model("user_model");
 			$this->user_model->instantiateUserInfo($session);
@@ -41,5 +42,10 @@
 			$data["main_content"] = "entire_post";
 			$this->load->view("includes/template", $data); 
 		}
+	}
+
+	function getUserData() {
+		$this->load->model("entire_post_model");
+		$this->entire_post_model->getPostAuthor($_POST['user_id']);
 	}
 }

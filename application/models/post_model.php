@@ -61,7 +61,6 @@ class Post_model extends CI_Model {
 		ON i.id=h.innlegg_id
 		ORDER BY i.id DESC";
 		$query = $this->db->query($sql, array());
-	
 		return $query;
 	}
 	
