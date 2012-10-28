@@ -62,4 +62,8 @@ jQuery(document).ready(function($) {
 	 	$('#post_user_points').remove();
 	 	$('.close_post_user_btn').remove();
 	});
+	
+	$('html').click(function() {	
+	 	$(".post_user_panel").fadeOut(300);
+	});
 });

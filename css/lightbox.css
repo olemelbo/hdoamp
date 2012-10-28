@@ -12,7 +12,7 @@
 }
 
 
-#panel, #user_panel, .feedback_panel, .statistics_panel  {  
+#panel, #user_panel  {  
  	display:none;  
  	position:fixed;  
  	top:100px;  
@@ -25,7 +25,7 @@
  	z-index:1001;  
 }	
 
-.post_user_panel {
+.post_user_panel, .feedback_panel, .statistics_panel {
 	display:none;  
  	position:fixed;  
  	top:100px;  

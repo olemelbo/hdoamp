@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
 					if(data.error) {
 						alert(data.error);
 					} else { 
-						$("#lightbox, .statistics_panel").fadeIn(300);
+						$(".statistics_panel").fadeIn(300);
 						var agree = 0;
 						var relevant = 0;
 						var informative = 0;
@@ -96,6 +96,10 @@ jQuery(document).ready(function($){
 	});
 	
 	$(".close_statistics_btn").click(function() { 
-	 	$("#lightbox, .statistics_panel").fadeOut(300);
+	 	$(".statistics_panel").fadeOut(300);
+	});
+	
+	$('html').click(function() {	
+	 	$(".statistics_panel").fadeOut(300);
 	});
 });

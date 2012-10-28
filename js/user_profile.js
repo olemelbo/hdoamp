@@ -28,4 +28,8 @@ jQuery(document).ready(function($) {
 	$("#close_userprofile_btn").live("click", function(){
 		$("#lightbox, #user_panel").fadeOut(300);
 	});
+	
+	$('html').click(function() {	
+	 	$("#lightbox, #user_panel").fadeOut(300);
+	});
 });

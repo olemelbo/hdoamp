@@ -8,7 +8,8 @@ class Post extends CI_Controller {
 
 	function validate_post() {
 		$this->load->model('post_model');
-		if(!$this->session->userdata('uid') == TRUE) {
+		$session = $this->session->userdata('uid');
+		if(!$session) {
 			$response['response'] = "error";
 			$response['error'] = "Du må være innlogget for å skrive et innlegg";
 			echo json_encode($response);

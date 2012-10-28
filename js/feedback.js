@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){ 
 	var post_id;
 	$(".post_feedback").click(function() { 
-	 	$("#lightbox, .feedback_panel").fadeIn(300);
+	 	$(".feedback_panel").fadeIn(300);
 	 	post_id = this.id;
 	});
 	
@@ -68,6 +68,7 @@ jQuery(document).ready(function($){
 	});
 	
 	$(".close_feedback_btn").click(function() { 
-	 	$("#lightbox, .feedback_panel").fadeOut(300);
+	 	$(".feedback_panel").fadeOut(300);
 	});
+	
 });

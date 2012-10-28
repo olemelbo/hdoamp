@@ -129,7 +129,11 @@ p, label {
 	margin: 20px;
 	background-color:#9B9494;
 	height: 250px;
-	width: 70%;
+	width: 50%;
+}
+
+.post_reports, .post_feedback, .post_statistic {
+	margin-right: 20px;
 }
 
 #post {
@@ -144,7 +148,6 @@ p, label {
 .post_bar {
 	position:absolute;
 	bottom:0px;
-	height:20%;
 	background-color:black;
 	width:100%;
 }
@@ -175,7 +178,7 @@ p, label {
 #post_content p {
 	padding-top:0px;
 	font-size: 14px;
-	padding-bottom: 65px;
+	padding-bottom: 105px;
 }
 
 
@@ -194,7 +197,16 @@ p, label {
 }
 
 #post {
-	width: 55%;
+	width: 40%;
+	position: relative;
+}
+
+.entire_post_bar {
+	margin-top: 20px;
+	position:absolute;
+	bottom:0px;
+	background-color:black;
+	width:100%;
 }
 
 #post_content {
