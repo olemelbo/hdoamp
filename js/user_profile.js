@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) { 
-	$("#user_profile").live("click", function(){
+	$("#user_profile").live("click", function() {
 	 	$("#lightbox, #user_panel").fadeIn(300);
 	});
 	

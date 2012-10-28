@@ -39,12 +39,13 @@ jQuery(document).ready(function($) {
 								
 							}
 						});
-					
-						$('#post_user_name').append('<h2>'+ fnavn + ' ' + enavn + '</h2>');
-						$('#post_user_department').append('<p>'+ "Avdeling: " + department +'</p>');
-						$('#post_user_email').append('<p>'+ "Epost: " + email +'</p>');
-						$('#post_user_last_used').append('<p>'+ "Sist innlogget: " + last_used +'</p>');
-						$('#post_user_points').append('<p>' + "Antall poeng: " + points + '</p>');
+						
+						$('.post_user_panel').append('<div id="post_user_name"><h2>'+ fnavn + ' ' + enavn + '</h2></div>');
+						$('.post_user_panel').append('<div id="post_user_department"><p>'+ "Avdeling: " + department +'</p></div>');
+						$('.post_user_panel').append('<div id="post_user_email"><p>'+ "Epost: " + email +'</p></div>');
+						$('.post_user_panel').append('<div id="post_user_last_used"><p>'+ "Sist innlogget: " + last_used +'</p></div>');
+						$('.post_user_panel').append('<div id="post_user_points"><p>' + "Antall poeng: " + points + '</p></div>');
+						$('#post_user_points').after('<button class="close_post_user_btn">Lukk</button>');
 					} else {
 						alert(data.response);
 					}
@@ -54,5 +55,11 @@ jQuery(document).ready(function($) {
 	
 	$(".close_post_user_btn").live("click", function() {
 	 	$(".post_user_panel").fadeOut(300);
+	 	$('#post_user_name').remove();
+	 	$('#post_user_department').remove();
+	 	$('#post_user_email').remove();
+	 	$('#post_user_last_used').remove();
+	 	$('#post_user_points').remove();
+	 	$('.close_post_user_btn').remove();
 	});
 });

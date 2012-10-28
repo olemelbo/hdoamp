@@ -79,14 +79,10 @@
 				<?php endif; ?>
 			</div>
 			<div class="user_credentials">
-				<div id="post_user_name"> </div>
-				<div id="post_user_department"> </div>
-				<div id="post_user_email"> </div>
-				<div id="post_user_last_used"> </div>
-				<div id="post_user_points"> </div>
+				
 			</div><!--end user_credentials-->
 			<div class="post_profile_buttons">
-				<button class="close_post_user_btn">Lukk</button>
+				
 			</div>
 		</div><!--end post user-->
 	</div><!--end panel frame-->
