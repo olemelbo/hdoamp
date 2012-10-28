@@ -153,12 +153,19 @@ p, label {
 	width: 90%;
 }
 
-.post img, #post_picture img {
+.post img {
 	float:left;
 	height: 170px;
 	width: 100px;
 	padding: 15px;
 	padding-bottom: 0px;
+}
+
+#post_picture img {
+	float:left;
+	padding: 15px;
+	padding-bottom: 0px;
+	height: 120px;
 }
 
 .hashtags {
@@ -190,6 +197,12 @@ p, label {
 #post_author_credentials {
 	clear:both;
 	padding:20px;
+}
+
+#post_profile_picture {
+	float:left;
+	margin-left: 5px;
+	margin-right:10px;
 }
 
 a:link, a:visited, a:hover, a:active {

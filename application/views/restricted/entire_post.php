@@ -1,6 +1,7 @@
 <div id="wrap">
 	<div id="header">
-		<div id="logo"><h1><a href="<?php echo site_url(); ?>">HiG<span style="font-weight: normal;"> Debatt</span></a></h1>
+		<div id="logo">
+			<h1><a href="<?php echo site_url(); ?>">HiG<span style="font-weight: normal;"> Debatt</span></a></h1>
 		</div><!-- #logo -->
 		<div id='logout'><h3><a href='#'>Logg ut</a></h3></div>
 		<div id='user_profile'><h3><a href='#'> <?php echo $user_fullname; ?> | </a></h3></div>
@@ -17,7 +18,6 @@
 	<div id="content_post">
 		<div id="post">
 			<div id="post_author">
-				<?php echo $entire_post['user_id']; ?>
 				<?php if(empty($entire_post['image_link'])) : ?>
 						<div id="post_picture"><a href="#"><img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" id="<?php echo $entire_post['user_id']; ?>" /></a></div>	
 				<?php else : ?>
@@ -26,10 +26,12 @@
 			<div id="post_content">
 				<h2><?php echo $entire_post["tittel"]; ?></h2>
 				<p><?php echo $entire_post["in_text"]; ?></p>
-			</div>
-		</div>
+			</div><!--end post_content-->
+		</div><!-- end post_author-->
 		
-	</div>
+		</div><!--post-->
+	
+	</div><!--end content_post-->
 	
 	<div id="sidebar">
 		<p>Masse artig innhold</p>
@@ -42,9 +44,7 @@
 			<?php else : ?>
 			
 			<?php endif; ?>
-		</div>
-		
-		
+		</div><!--end profile_picture-->
 		
 		<div id="user_credentials">
 			<h3><?php echo $user_fullname; ?></h3>
@@ -62,13 +62,32 @@
 						<li><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $key?>""><?php echo $value; ?></a></li>
 					<?php endforeach; ?>
 				</ul>
-			</div>
-		</div>
+			</div><!-- end user_last_posts-->
+		</div><!--end user_credentials-->
 		<div id="profile_buttons">
-			
 			<button id="save_userprofile_btn">Lagre</button>
 			<button id="close_userprofile_btn">Lukk</button>
-		</div>
-		
-	</div>
+		</div><!--end profile_buttons-->
+	</div><!--div end user_panel-->	
+	<div class="panel_frame">
+		<div class="post_user_panel">
+			<div id="post_profile_picture">
+				<?php if(empty($user_image)) : ?>
+					<img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picrure" />	
+				<?php else : ?>
+				
+				<?php endif; ?>
+			</div>
+			<div class="user_credentials">
+				<div id="post_user_name"> </div>
+				<div id="post_user_department"> </div>
+				<div id="post_user_email"> </div>
+				<div id="post_user_last_used"> </div>
+				<div id="post_user_points"> </div>
+			</div><!--end user_credentials-->
+			<div class="post_profile_buttons">
+				<button class="close_post_user_btn">Lukk</button>
+			</div>
+		</div><!--end post user-->
+	</div><!--end panel frame-->
 </div>
