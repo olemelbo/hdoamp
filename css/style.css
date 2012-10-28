@@ -211,12 +211,22 @@ p, label {
 	background-color:#B9B6B6;
 }
 
-.entire_post_bar {
+#comment_picture {
+	float:left;
+	margin-right: 5px;    
+}
+
+
+.entire_post_bar, .comments_post_bar {
 	margin-top: 20px;
 	position:absolute;
 	bottom:0px;
 	background-color:black;
 	width:100%;
+}
+
+.comment_text {
+	padding-bottom: 170px;
 }
 
 #post_content {

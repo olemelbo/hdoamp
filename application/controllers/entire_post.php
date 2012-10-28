@@ -25,6 +25,7 @@
 					$data['comments'][$comment["id"]]["user_id"] = $comment['user_id'];
 					$data['comments'][$comment["id"]]["comment_text"] = $comment['comment_text'];
 					$data['comments'][$comment["id"]]["date"] = $comment['date'];
+					$data['comments'][$comment["id"]]["user_data"] = $this->getUserData($comment["user_id"]);
 				}
 				$data['comment_error']['error'] = "ok";
 			} else {
@@ -59,8 +60,14 @@
 		}
 	}
 
-	function getUserData() {
+	function getUserDataAjax() {
 		$this->load->model("entire_post_model");
-		$this->entire_post_model->getPostAuthor($_POST['user_id']);
+		$this->entire_post_model->getPostAuthorAjax($_POST['user_id']);
+	}
+	
+	function getUserData($user_id) {
+		$this->load->model("entire_post_model");
+		$user_data = $this->entire_post_model->getCommentAuthor($user_id);
+		return $user_data;
 	}
 }

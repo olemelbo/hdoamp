@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 	 	}
 	 	
 	 	$.ajax ({
-				url : siteURL + "/entire_post/getUserData",
+				url : siteURL + "/entire_post/getUserDataAjax",
 				type : 'POST',
 				data : data,
 				success : function (data) {
