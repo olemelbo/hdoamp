@@ -132,8 +132,14 @@ p, label {
 	width: 50%;
 }
 
-.post_reports, .post_feedback, .post_statistic {
-	margin-right: 20px;
+.post_reports {
+	margin-right: 70px;
+	margin-left: 20px;
+}
+
+.post_feedback, .post_statistic {
+	margin-right: 70px;
+	margin-left: 70px;
 }
 
 #post {
@@ -228,6 +234,23 @@ p, label {
 	margin-right:10px;
 }
 
+#comments_pic {
+	width: 25px;
+	height: 25px;
+	margin-right: 7px;
+	padding: 0;
+}
+
+.post_alternatives {
+	float:left;
+	margin-top: 18px;
+}
+
+.numberOfComments {
+	float:right;
+	margin-right: 5px;
+	margin-left: 5px;
+}
 a:link, a:visited, a:hover, a:active {
 	text-decoration:none;
 	color: #b82f11;

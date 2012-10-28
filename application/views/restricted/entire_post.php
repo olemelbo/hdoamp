@@ -35,7 +35,15 @@
 		</div>
 		
 		</div><!--post-->
-	
+		<div class="post_comment">
+			<?php foreach($comments as $comment) : ?>
+				<?php if(empty($comment_error)) : ?>
+					<p>Det finnes ingen kommentarer. Hver den første til å kommentere</p>
+				<?php else : ?>
+					
+				<?php endif; ?>
+			<?php endforeach; ?>
+		</div>
 	</div><!--end content_post-->
 	
 	<div id="sidebar">

@@ -32,6 +32,7 @@ class Site extends CI_Controller {
 				$data["posts"][$post['id']]['in_text'] = $post['in_text'];
 				$data["posts"][$post['id']]['user_id'] = $post['user_id'];
 				$data["posts"][$post['id']]['date'] = $post['date'];
+				$data["posts"][$post['id']]['numberOfComments'] = $this->post_model->countComments($post['id']);
 				if(!empty($post['hashtag'])) {
 					$data["posts"][$post['id']]['hashtags'][] = $post['hashtag'];
 				}

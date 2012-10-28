@@ -16,6 +16,21 @@
 				$data['entire_post']['date'] = $upost["date"];
 			}
 			
+			$this->load->model("entire_post_model");
+			$comments_query = $this->entire_post_model->getPostComments($this->uri->segment(3));
+			if($comments_query->num_rows() > 0) {
+				foreach ($comments_query->result_array() as $comment) {
+					$data['comments'][$comment["id"]]["id"] = $comment['id'];
+					$data['comments'][$comment["id"]]["parent_id"] = $comment['parent_id'];
+					$data['comments'][$comment["id"]]["user_id"] = $comment['user_id'];
+					$data['comments'][$comment["id"]]["comment_text"] = $comment['comment_text'];
+					$data['comments'][$comment["id"]]["date"] = $comment['date'];
+				}
+			
+			} else {
+				$data['comments']["comment_error"] = "Ingen kommentarer";
+			}
+			
 			//User Info
 			$this->load->model("user_model");
 			$this->user_model->instantiateUserInfo($session);

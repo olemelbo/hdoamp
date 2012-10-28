@@ -64,6 +64,13 @@ class Post_model extends CI_Model {
 		return $query;
 	}
 	
+	function countComments($post_id) {
+		$this->db->select('COUNT(id) as num')
+        ->from('kommentar')
+        ->where('innlegg_id', $post_id);
+		return $this->db->get()->row()->num;
+	}
+	
 }
 
 ?>

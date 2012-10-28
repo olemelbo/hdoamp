@@ -34,4 +34,10 @@ class Entire_post_model extends CI_Model {
 			echo json_encode($data);
 		}
 	}	
+	
+	function getPostComments($post_id) {
+		$sql = "SELECT * FROM kommentar WHERE innlegg_id = ?";
+		$query = $this->db->query($sql, array($post_id));
+		return $query;
+	}
 }

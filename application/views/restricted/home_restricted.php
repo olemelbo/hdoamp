@@ -18,7 +18,7 @@
 		<div class="post">
 			<div id="post_<?php echo $post['id']; ?>">
 				<?php if(empty($user_image)) : ?>
-					<div id="post_picture"><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>"><img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" /></a></div>	
+					<div id="post_picture"><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>"><img src="<?php echo base_url()?>images/profile.jpg" alt="profile_picure" /></a></div>	
 				<?php else : ?>
 				
 				<?php endif; ?>
@@ -30,10 +30,14 @@
 				
 				<p class="post_truncated"><?php echo $truncated = substr($post['in_text'], 0, 300) . '...' ?></p>
 				<div class="post_bar">
-					<button type="button" class="post_reports">Rapporter</button>
-					<button type="button" class="post_feedback" id="<?php echo $post['id']; ?>">Feedback</button>
-					<button type="button" class="post_statistic" id="<?php echo $post['id']; ?>">Statestikk</button>
-					<a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>">Se kommentarer</a>
+					<div class="post_alternatives">
+						<button type="button" class="post_reports">Rapporter</button>
+						<button type="button" class="post_feedback" id="<?php echo $post['id']; ?>">Feedback</button>
+						<button type="button" class="post_statistic" id="<?php echo $post['id']; ?>">Statestikk</button>
+					</div>
+					<div class="numberOfComments">
+						<h3><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>"><img src='<?php echo base_url(); ?>images/speechbubble.png' id="comments_pic" /><?php echo $post['numberOfComments'] ?> kommentarer</a></h3>
+					</div>
 				</div>
 			</div><!--end divpost-->
 		</div><!--end classpost-->
