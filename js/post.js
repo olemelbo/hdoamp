@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){ 
 	$("#pen-icon").click(function() { 
-	 	$("#lightbox, #panel").fadeIn(300);
+	 	$("#new_post_panel").fadeIn(300);
 	});
 	
 	var siteURL = $("#siteurl p").text();
@@ -21,7 +21,7 @@ jQuery(document).ready(function($){
 				success : function (data) {
 					data = $.parseJSON(data);
 					if(data.response == "ok") {
-						$("#lightbox, #panel").fadeOut(300);
+						$("#new_post_panel").fadeOut(300);
 						$("#content_post").load(siteURL + " #content_post");
 					} else {
 						alert(data.error);
@@ -32,6 +32,7 @@ jQuery(document).ready(function($){
 	});
 	
 	$("#close_btn").click(function() {
-		$("#lightbox, #panel").fadeOut(300);
+		$("#new_post_panel").fadeOut(300);
 	});
+	
 });

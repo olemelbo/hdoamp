@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){ 
 	var post_statistic_id;
-	$(".post_statistic").click(function() { 
+	$(".post_statistic").live("click", function() {
 	 	post_statistic_id = this.id;
 	 	data = {
 	 		post_id : post_statistic_id

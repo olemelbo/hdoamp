@@ -65,5 +65,13 @@ jQuery(document).ready(function($) {
 	
 	$('html').click(function() {	
 	 	$(".post_user_panel").fadeOut(300);
+	 	$(".post_user_panel").fadeOut(300);
+	 	$('#post_user_name').remove();
+	 	$('#post_user_department').remove();
+	 	$('#post_user_email').remove();
+	 	$('#post_user_last_used').remove();
+	 	$('#post_user_points').remove();
+	 	$('.close_post_user_btn').remove();
+
 	});
 });
