@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
            					if(value == "agree") {
            						agree += 1;
            					} else if(value =="relevant") {
-           						disagree +=1;
+           						relevant +=1;
            					} else if(value =="informative") {
            						informative +=1;
            					} else if(value =="well_written") {
