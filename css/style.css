@@ -168,6 +168,17 @@ p, label {
 	height: 120px;
 }
 
+#post_content h2 {
+	padding-top:15px;
+}
+
+#post_content p {
+	padding-top:0px;
+	font-size: 14px;
+	padding-bottom: 65px;
+}
+
+
 .hashtags {
 	font-size: 14px;
 }
