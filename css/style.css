@@ -142,11 +142,6 @@ p, label {
 	margin-left: 70px;
 }
 
-#post {
-	margin: 20px;
-	background-color:#9B9494;
-}
-
 #post_content p {
 	padding: 20px;
 }
@@ -174,7 +169,7 @@ p, label {
 	float:left;
 	padding: 15px;
 	padding-bottom: 0px;
-	height: 120px;
+	height: 140px;
 }
 
 #post_content h2 {
@@ -205,6 +200,15 @@ p, label {
 #post {
 	width: 40%;
 	position: relative;
+	margin: 20px;
+	background-color:#ADA9A9;
+}
+
+.comment {
+	width: 40%;
+	position: relative;
+	margin: 20px;
+	background-color:#B9B6B6;
 }
 
 .entire_post_bar {

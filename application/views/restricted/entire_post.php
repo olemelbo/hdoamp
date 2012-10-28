@@ -36,11 +36,18 @@
 		
 		</div><!--post-->
 		<div class="post_comment">
-			<?php foreach($comments as $comment) : ?>
-				<?php if(empty($comment_error)) : ?>
+			<?php foreach($comment_error as $key => $value) : ?>
+				<?php if($value == "error") : ?>
 					<p>Det finnes ingen kommentarer. Hver den første til å kommentere</p>
 				<?php else : ?>
-					
+					<?php print_r($comments); ?>
+					<?php foreach($comments as $comment) : ?>
+						<div class="comment">
+							
+								<p><?php echo $comment['comment_text']; ?></p>
+							
+						</div>
+					<?php endforeach; ?>
 				<?php endif; ?>
 			<?php endforeach; ?>
 		</div>

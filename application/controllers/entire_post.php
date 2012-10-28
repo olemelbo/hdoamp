@@ -26,9 +26,9 @@
 					$data['comments'][$comment["id"]]["comment_text"] = $comment['comment_text'];
 					$data['comments'][$comment["id"]]["date"] = $comment['date'];
 				}
-			
+				$data['comment_error']['error'] = "ok";
 			} else {
-				$data['comments']["comment_error"] = "Ingen kommentarer";
+				$data['comment_error']['error'] = "error";
 			}
 			
 			//User Info

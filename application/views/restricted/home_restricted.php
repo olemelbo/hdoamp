@@ -28,7 +28,11 @@
 					<p class="hashtags"><?php foreach($post['hashtags'] as $p) { echo "<a href='#'>#".$p . " " . "</a>"; } ?> </p>
 				<?php endif; ?>
 				
-				<p class="post_truncated"><?php echo $truncated = substr($post['in_text'], 0, 300) . '...' ?></p>
+				<?php if(!empty($post['date'])) : ?>
+					<p><?php echo $post['date']; ?></p>
+				<?php endif; ?>
+				
+				<p class="post_truncated"><?php echo $truncated = substr($post['in_text'], 0, 250) . '...' ?></p>
 				<div class="post_bar">
 					<div class="post_alternatives">
 						<button type="button" class="post_reports">Rapporter</button>
