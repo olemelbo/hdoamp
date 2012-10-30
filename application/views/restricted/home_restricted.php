@@ -37,7 +37,7 @@
 					<div class="post_alternatives">
 						<button type="button" class="post_reports">Rapporter</button>
 						<button type="button" class="post_feedback" id="<?php echo $post['id']; ?>">Feedback</button>
-						<button type="button" class="post_statistic" id="<?php echo $post['id']; ?>">Statestikk</button>
+						<button type="button" class="post_statistic" id="<?php echo $post['id']; ?>">Statistikk</button>
 					</div>
 					<div class="numberOfComments">
 						<h3><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>"><img src='<?php echo base_url(); ?>images/speechbubble.png' id="comments_pic" /><?php echo $post['numberOfComments'] ?> kommentarer</a></h3>
@@ -56,6 +56,8 @@
 		<div id="sidebar_content">
 			<p>1. Pernille Hellesvik</p>
 			<p>2. Ole Christian Melbostad</p>
+			<p>3. Alexander Tømmerholen</p>
+			<p>4. Marte Johnsen</p>
 		</div>
 	</div><!-- end sidebar -->
 	
