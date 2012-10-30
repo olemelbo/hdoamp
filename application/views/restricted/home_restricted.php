@@ -94,19 +94,22 @@
 			<div id="user_last_posts">
 				<p>Dine siste innlegg:</p>
 				<ul>
-					<?php foreach($user_posts as $key => $value) : ?>
-						<li><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $key?>""><?php echo $value; ?></a></li>
-					<?php endforeach; ?>
+					<?php if (!empty($user_post)) : ?>
+						<?php foreach($user_posts as $key => $value) : ?>
+							<li><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $key?>""><?php echo $value; ?></a></li>
+						<?php endforeach; ?>
+					<?php else : ?>
+						<?php echo "Du har ikke skrevet noen innlegg."; ?>
+					<?php endif; ?>
 				</ul>
 			</div>
 		</div>
-		<div id="profile_buttons">
-			
+		<div id="profile_buttons">	
 			<button id="save_userprofile_btn">Lagre</button>
 			<button id="close_userprofile_btn">Lukk</button>
 		</div>
 		
-	</div>
+	</div><!-- End user_panel-->
 	
 	<div class="feedback_panel" style="display:none;">
 		<h1>Gi din feedback til innlegget</h1>
