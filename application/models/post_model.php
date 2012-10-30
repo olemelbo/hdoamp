@@ -56,8 +56,8 @@ class Post_model extends CI_Model {
 	
 	function getAllPosts() {
 		$sql = "SELECT i.id, i.tittel, i.in_text, i.user_id, i.date, h.hash_id, h.hashtag
-		FROM INNLEGG i
-		LEFT JOIN HASHTAG h
+		FROM innlegg i
+		LEFT JOIN hashtag h
 		ON i.id=h.innlegg_id
 		ORDER BY i.id DESC";
 		$query = $this->db->query($sql, array());
