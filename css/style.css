@@ -133,13 +133,11 @@ p, label {
 }
 
 .post_reports {
-	margin-right: 70px;
-	margin-left: 20px;
+	float: left;
 }
 
 .post_feedback, .post_statistic {
-	margin-right: 70px;
-	margin-left: 70px;
+	float: left;
 }
 
 #post_content p {
@@ -256,7 +254,6 @@ p, label {
 }
 
 .post_alternatives {
-	float:left;
 	margin-top: 18px;
 }
 
