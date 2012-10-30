@@ -5,6 +5,7 @@
 		HiG Debatt
 	</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="icon" href="<?=base_url()?>/favicon.ico" type="image/gif">
 	<link rel="stylesheet" href="<?php echo base_url();?>css/style.css" type="text/css" />
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/lightbox.css" />
