@@ -32,7 +32,9 @@
 		
 	</div><!--End content post -->
 	<div id="sidebar">
-		<p>Masse artig innhold</p>
+		<h3>Månedens debattant</h3>
+		<p>1. Pernille Hellesvik</p>
+		<p>2. Ole Christian Melbostad</p>
 	</div>
 	
 	<div id="login_window" title="Logg inn her" style="display:none;">

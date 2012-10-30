@@ -47,10 +47,17 @@
 		</div><!--end classpost-->
 		<div class="clear_both"></div>
 		<?php endforeach; ?>
-	</div><!--End content post -->
+	</div><!--end content post -->
 	<div id="sidebar">
-		<p>Masse artig innhold</p>
-	</div>
+		<div id="sidebar_head">
+			<h2 class="mnd">Månedens</h2>
+			<h2 class="deb">debattant</h2>
+		</div>
+		<div id="sidebar_content">
+			<p>1. Pernille Hellesvik</p>
+			<p>2. Ole Christian Melbostad</p>
+		</div>
+	</div><!-- end sidebar -->
 	
 	<div id="logout_window" title="Er du sikker på at du vil logge ut?" style="display:none;">
 			<button type="button" id="logout_submit" name="logout">Ja</button>

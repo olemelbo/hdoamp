@@ -5,6 +5,23 @@ body {
 
 p, label {
 	font-size: 14px;
+	color: black;
+}
+
+h2 {
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+}
+
+.deb {
+	float: right;
+	font-weight: normal;
+	margin-top: -5px;
+	font-size: 1.7em;
+}
+
+.mnd {
+	margin-bottom: 0;
+	font-size: 1.7em;
 }
 
 #wrap {
@@ -62,10 +79,18 @@ p, label {
 }
 
 #sidebar {
-	width: 22%;
+	width: 20%;
 	height: 30%;
 	float: right;
 	background-color: #e6e6e6;
+}
+
+#sidebar_head {
+	margin: 20px;
+}
+
+#sidebar_content {
+	padding: 20px;
 }
 
 #footer {
