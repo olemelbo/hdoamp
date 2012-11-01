@@ -17,21 +17,9 @@
 			}
 			
 			$this->load->model("post_comments_model");
-			$comments_query = $this->post_comments_model->getPostComments($this->uri->segment(3));
-			if($comments_query->num_rows() > 0) {
-				foreach ($comments_query->result_array() as $comment) {
-					$data['comments'][$comment["id"]]["id"] = $comment['id'];
-					$data['comments'][$comment["id"]]["parent_id"] = $comment['parent_id'];
-					$data['comments'][$comment["id"]]["user_id"] = $comment['user_id'];
-					$data['comments'][$comment["id"]]["comment_text"] = $comment['comment_text'];
-					$data['comments'][$comment["id"]]["date"] = $comment['date'];
-					$data['comments'][$comment["id"]]["user_data"] = $this->getUserData($comment["user_id"]);
-				}
-				$data['comment_error']['error'] = "ok";
-			} else {
-				$data['comment_error']['error'] = "error";
-			}
-			
+			$this->post_comments_model->initializePostComments($this->uri->segment(3));
+			$data['comment_parents'] = $this->post_comments_model->getCommentParents();
+			$data['comment_children'] = $this->post_comments_model->getCommentChildren();
 			//User Info
 			$this->load->model("user_model");
 			$this->user_model->instantiateUserInfo($session);

@@ -1,12 +1,41 @@
 <?php 
 class Post_comments_model extends CI_Model {
+	public $parents = array();
+	public $children = array();
+	
+	function initializePostComments($post_id) {
+		$sql = "SELECT * FROM kommentar WHERE innlegg_id = ? ORDER BY id ASC";
+		$comments_query = $this->db->query($sql, array($post_id));
+		if($comments_query->num_rows() > 0) {
+			foreach ($comments_query->result_array() as $comment) {
+				if ($comment['parent_id'] == 0) {  
+	           		$this->parents[$comment['id']]['comment_id'] = $comment['id']; 
+					$this->parents[$comment['id']]['innlegg_id'] = $comment['innlegg_id'];
+					$this->parents[$comment['id']]['user_id'] = $this->getCommentAuthor($comment['user_id']);
+					$this->parents[$comment['id']]['comment_text'] = $comment['comment_text'];
+					$this->parents[$comment['id']]['date'] = $comment['date'];
+	           	} else {
+	            	$this->children[$comment['parent_id']]['parent_id'] = $comment['parent_id'];
+					$this->children[$comment['id']]['comment_id'] = $comment['id']; 
+					$this->children[$comment['id']]['innlegg_id'] = $comment['innlegg_id'];
+					$this->children[$comment['id']]['user_id'] = $this->getCommentAuthor($comment['user_id']);
+					$this->children[$comment['id']]['comment_text'] = $comment['comment_text'];
+					$this->children[$comment['id']]['date'] = $comment['date'];
+	           	}  
+			}
+		} else {
+			
+		}
 		
-	function getPostComments($post_id) {
-		$sql = "SELECT * FROM kommentar WHERE innlegg_id = ?";
-		$query = $this->db->query($sql, array($post_id));
-		return $query;
+	}	
+
+	function getCommentParents() {
+		return $this->parents;
 	}
 	
+	function getCommentChildren() {
+		return $this->children;
+	}
 	
 	function getCommentAuthor($user_id) {
 		$sql = "SELECT * FROM bruker WHERE id = ?";	

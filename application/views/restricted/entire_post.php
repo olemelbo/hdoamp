@@ -36,6 +36,7 @@
 		
 		</div><!--post-->
 		<div class="post_comment">
+			<?php print_r($comment_parents); ?>
 			<?php foreach($comment_error as $key => $value) : ?>
 				<?php if($value == "error") : ?>
 					<p>Det finnes ingen kommentarer. Hver den første til å kommentere</p>
@@ -43,7 +44,7 @@
 					<div id="comment_author">
 					<?php print_r($comments); ?>
 					<?php foreach($comments as $comment) : ?>
-						<div class="comment">
+						<div class="parent_comment">
 								<div id="comment_author">
 									<?php if(empty($entire_post['image_link'])) : ?><!-- Må rettes paa-->
 										<div id="post_picture"><a href="#"><img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" id="<?php echo $comment['user_id']; ?>" /></a></div>	
