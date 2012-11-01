@@ -1,17 +1,18 @@
 <?php 
-class Entire_post_model extends CI_Model {
+class Post_comments_model extends CI_Model {
 		
-	function getEntirePost($post_id) {
-		$sql = "SELECT * FROM innlegg WHERE id=?";
+	function getPostComments($post_id) {
+		$sql = "SELECT * FROM kommentar WHERE innlegg_id = ?";
 		$query = $this->db->query($sql, array($post_id));
 		return $query;
 	}
 	
-	function getPostAuthorAjax($user_id) {
+	
+	function getCommentAuthor($user_id) {
 		$sql = "SELECT * FROM bruker WHERE id = ?";	
-		$query_author = $this->db->query($sql, array($user_id));
-		if($query_author->num_rows() > 0) {
-			foreach ($query_author->result_array() as $author) {
+		$query_comment_author = $this->db->query($sql, array($user_id));
+		if($query_comment_author->num_rows() > 0) {
+			foreach ($query_comment_author->result_array() as $author) {
 				$data['id'] = $author['id'];
 				$data['fnavn'] = $author["fnavn"];
 				$data['enavn'] = $author["enavn"];
@@ -26,12 +27,11 @@ class Entire_post_model extends CI_Model {
 			foreach($query_user_points->result_array() as $points) {
 				$data['points'] = $points['antall_poeng'];
 			} 
-			$data['response'] = "ok";
-			echo json_encode($data);
+			return $data;
 		} else {
-			$data['response'] = "error";
 			$data['error'] = "Noe gikk galt. Prøv igjen.";
-			echo json_encode($data);
+			return $data;
 		}
-	}		
+	}	
+	
 }

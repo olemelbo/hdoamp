@@ -16,8 +16,8 @@
 				$data['entire_post']['date'] = $upost["date"];
 			}
 			
-			$this->load->model("entire_post_model");
-			$comments_query = $this->entire_post_model->getPostComments($this->uri->segment(3));
+			$this->load->model("post_comments_model");
+			$comments_query = $this->post_comments_model->getPostComments($this->uri->segment(3));
 			if($comments_query->num_rows() > 0) {
 				foreach ($comments_query->result_array() as $comment) {
 					$data['comments'][$comment["id"]]["id"] = $comment['id'];
@@ -66,8 +66,8 @@
 	}
 	
 	function getUserData($user_id) {
-		$this->load->model("entire_post_model");
-		$user_data = $this->entire_post_model->getCommentAuthor($user_id);
+		$this->load->model("post_comments_model");
+		$user_data = $this->post_comments_model->getCommentAuthor($user_id);
 		return $user_data;
 	}
 }

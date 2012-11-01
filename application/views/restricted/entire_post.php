@@ -45,13 +45,13 @@
 					<?php foreach($comments as $comment) : ?>
 						<div class="comment">
 								<div id="comment_author">
-									<?php if(empty($entire_post['image_link'])) : ?>
+									<?php if(empty($entire_post['image_link'])) : ?><!-- Må rettes paa-->
 										<div id="post_picture"><a href="#"><img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" id="<?php echo $comment['user_id']; ?>" /></a></div>	
 									<?php else : ?>
 								
 									<?php endif; ?>
 								</div>
-								<h3> </h3>
+								<h3>Brukernavn</h3>
 								<p><?php echo $comment['date']; ?></p>
 								<p class="comment_text"><?php echo $comment['comment_text']; ?></p>
 			
@@ -151,5 +151,6 @@
 		<div class="feedback_buttons">
 			<button class="close_statistics_btn">Lukk</button>
 		</div>
+	</div>
 	</div>
 </div>
