@@ -44,7 +44,7 @@ jQuery(document).ready(function($){
                 				type: 'column'
             				},
            					title: {
-                				text: 'Statestikk for innlegget'
+                				text: 'Statistikk for innlegget'
             				},
             				xAxis: {
                 				categories: [
@@ -86,7 +86,12 @@ jQuery(document).ready(function($){
             				},
                 			series: [{
                 				name: 'Dette innlegget',
-                				data: [agree,relevant, informative,well_written,disagree,unserious]
+                				data: [{y: agree, color: '#b82f11'},
+						       {y: relevant, color: '#ba3f23'},
+						       {y: informative, color: '#bd472c'},
+						       {y: well_written, color: '#c6573d'},
+						       {y: disagree, color: '#d06349'},
+						       {y: unserious, color: '#e07b63'}]
     
             				}]
             			});
