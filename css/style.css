@@ -93,11 +93,13 @@ h2 {
 }
 
 #footer {
-	clear:both;
+	clear: both;
 	height: 100px; 
 	width: 100%; 
 	background-image: url(../images/footer_bg.jpg); 
-	background-repeat: repeat-x;}
+	background-repeat: repeat-x;
+	text-align: center;
+}
 
 #logo {
 	float: left;	
