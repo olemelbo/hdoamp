@@ -295,3 +295,25 @@ a:link, a:visited, a:hover, a:active {
 }
 a:hover {text-decoration:underline;}
 a:active {text-decoration:underline;}
+
+
+#search {
+	position:absolute;
+ 	top:40px;
+ 	right:75px;
+ 	width:200px;
+}
+.form-wrapper #search {
+        width: 330px;
+        height: 20px;
+        padding: 10px 5px;
+        float: left;
+        font: bold 16px 'lucida sans', 'trebuchet MS', 'Tahoma';
+        border: 1px solid #ccc;
+        -moz-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #fff;
+        -webkit-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #fff;
+        box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #fff;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+}
