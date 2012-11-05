@@ -6,7 +6,7 @@
 		<div id='user_profile'><h3><a href='#'> <?php echo $user_fullname; ?> | </a></h3></div>
 		<div id="search">
 			<form class="form-wrapper">
-			        <input type="text" id="search" placeholder="S&oslash;k" required>
+			        <input type="text" id="search" placeholder="S&oslash;k p&aring; HiG Debatt" required>
 			</form>
 		</div>
 	</div><!-- end header-->	
