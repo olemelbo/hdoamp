@@ -40,9 +40,9 @@
 				<p class="post_truncated"><?php echo $truncated = substr($post['in_text'], 0, 250) . '...' ?></p>
 				<div class="post_bar">
 					<div class="post_alternatives">
-						<button type="button" class="post_reports">Rapporter</button>
-						<button type="button" class="post_feedback" id="<?php echo $post['id']; ?>">Feedback</button>
-						<button type="button" class="post_statistic" id="<?php echo $post['id']; ?>">Statistikk</button>
+						<input type="image" src="images/report.png" alt="Submit" width="48" height="48" class="post_reports"></button>
+						<input type="image" src="images/checklist.png" alt="Submit" width="48" height="48" class="post_feedback" id="<?php echo $post['id']; ?>"></button>
+						<input type="image" src="images/graph.png" alt="Submit" width="48" height="48" class="post_statistic" id="<?php echo $post['id']; ?>"></button>
 					</div>
 					<div class="numberOfComments">
 						<h3><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>"><img src='<?php echo base_url(); ?>images/speechbubble.png' id="comments_pic" /><?php echo $post['numberOfComments'] ?> kommentarer</a></h3>
