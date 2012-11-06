@@ -85,7 +85,7 @@ jQuery(document).ready(function($){
                 				}
             				},
                 			series: [{
-                				name: 'Dette innlegget',
+                				//name: 'Dette innlegget',
                 				data: [{y: agree, color: '#b82f11'},
 						       {y: relevant, color: '#ba3f23'},
 						       {y: informative, color: '#bd472c'},
