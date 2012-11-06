@@ -80,6 +80,12 @@
 			<p>4. Marte Johnsen</p>
 		</div>
 	</div><!-- end sidebar -->
+
+	<div id="sidebar2">
+		<div id="sidebar_head2">
+			<p>#Her #kommer #hashtags!</p>
+		</div>
+	</div><!-- end sidebar -->
 	
 	<div id="logout_window" title="Er du sikker på at du vil logge ut?" style="display:none;">
 			<button type="button" id="logout_submit" name="logout">Ja</button>

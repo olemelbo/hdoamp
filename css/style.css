@@ -105,6 +105,27 @@ h2 {
 	padding: 20px;
 }
 
+#sidebar2 {
+	width: 20%;
+	float: right;
+	background-color: #f57b1d;
+	margin-top: 25px;
+}
+
+#sidebar_head2 {
+	margin: 20px;
+}
+
+#sidebar_content2 {
+	padding: 20px;
+}
+
+#sidebar2 p {
+  	color: white;
+	font-size: large;
+	font-weight: bold;
+}
+
 #footer {
 	clear: both;
 	height: 130px; 
