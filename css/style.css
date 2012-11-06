@@ -114,6 +114,12 @@ h2 {
 	text-align: center;
 }
 
+#footer p {
+  	color: white;
+	font-size: large;
+	font-weight: bold;
+}
+
 #logo {
 	float: left;	
 }
