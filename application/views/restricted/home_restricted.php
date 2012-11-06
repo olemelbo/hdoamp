@@ -1,4 +1,4 @@
-<div id="wrap">
+﻿<div id="wrap">
 	<div id="header">
 		<div id="logo"><h1><a href="<?php echo site_url(); ?>">HiG<span style="font-weight: normal;"> Debatt</span></a></h1>
 		</div><!-- #logo -->
@@ -15,8 +15,13 @@
 		</div>
 		<div id="slogan">
 			<p>Husk å være snill og grei, ellers blir det ingen debatt på deg!</p>
-		</div><!-- #slogan -->
-	</div>
+		</div>
+		<div id="nav">
+			<h3>SISTE</h3>
+			<h3>POPULÆRE</h3>
+			<h3>ARKIV</h3>
+		</div>
+	</div><!-- #pen-wrapper -->
 
 	<div id="content_post">
 		<?php foreach($posts as $post) : ?>
@@ -40,14 +45,24 @@
 				<p class="post_truncated"><?php echo $truncated = substr($post['in_text'], 0, 250) . '...' ?></p>
 				<div class="post_bar">
 					<div class="post_alternatives">
-						<input type="image" src="images/report.png" alt="Submit" width="48" height="48" class="post_reports"></button>
-						<input type="image" src="images/checklist.png" alt="Submit" width="48" height="48" class="post_feedback" id="<?php echo $post['id']; ?>"></button>
-						<input type="image" src="images/graph.png" alt="Submit" width="48" height="48" class="post_statistic" id="<?php echo $post['id']; ?>"></button>
+						<div class="post_feedback">
+							<input type="image" src="images/feedback_icon.png" alt="Submit" width="35" height="35" class="post_feedback"></button>
+							<p>Gi feedback</p>
+						</div>
+						<div class="post_statistic">
+							<input type="image" src="images/graph_icon.png" alt="Submit" width="35" height="35" class="post_statistic" id="<?php echo $post['id']; ?>"></button>
+							<p>Se statistikk</p>
+						</div>
+						<div class="post_comment">
+							<input type="image" src="images/pen_icon.png" alt="Submit" width="35" height="35" class="post_comment" id="<?php echo $post['id']; ?>"></button>
+							<p>Kommentér</p>
+						</div>	
 					</div>
 					<div class="numberOfComments">
-						<h3><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>"><img src='<?php echo base_url(); ?>images/speechbubble.png' id="comments_pic" /><?php echo $post['numberOfComments'] ?> kommentarer</a></h3>
+						<p><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>"><img src='<?php echo base_url(); ?>images/speechbubble.png' id="comments_pic" /><?php echo $post['numberOfComments'] ?> kommentarer</a></p>
 					</div>
-				</div>
+				</div> <!-- end .postbar-->
+				
 			</div><!--end divpost-->
 		</div><!--end classpost-->
 		<div class="clear_both"></div>

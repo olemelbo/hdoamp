@@ -1,7 +1,7 @@
 <?php
 class Site extends CI_Controller {
 	function index() {
-		$session = $this->session->userdata('uid');
+		$session = $this->session->userdata('uid'); //Settes til $true istedet for $this hvis innlogging ikke funker
 		if($session) {
 			//User Info
 			$this->load->model('user_model');

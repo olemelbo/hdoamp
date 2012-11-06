@@ -1,4 +1,4 @@
-body {
+﻿body {
 	font-family: Helvetica, Tahoma, Arial, sans-serif;
 	color: #b82f11;
 }
@@ -78,6 +78,19 @@ h2 {
 	float: left;
 }
 
+#nav {
+	margin: 0 auto;
+	width: 78%;
+}
+
+#nav h3 {
+	float: left;
+	font-family: Tahoma, Arial, sans-serif;
+	padding: 0 40px;
+	color: #000;
+	font-weight: 200;
+}
+
 #sidebar {
 	width: 20%;
 	float: right;
@@ -155,15 +168,22 @@ h2 {
 	margin: 20px;
 	background-color:#9B9494;
 	height: 250px;
-	width: 50%;
+	width: 60%;
 }
 
-.post_reports {
+.post_feedback {
 	float: left;
+	margin-left: 25px;
 }
 
-.post_feedback, .post_statistic {
+.post_comment, .post_statistic {
 	float: left;
+	margin-left: 25px;
+}
+
+.post_feedback p, .post_comment p, .post_statistic p {
+font-size: 0.8em;
+color: #ba330d;
 }
 
 #post_content p {
@@ -173,7 +193,6 @@ h2 {
 .post_bar {
 	position:absolute;
 	bottom:0px;
-	background-color:black;
 	width:100%;
 }
 
@@ -285,8 +304,7 @@ h2 {
 
 .numberOfComments {
 	float:right;
-	margin-right: 5px;
-	margin-left: 5px;
+	margin: 20px 10px 0 0;
 }
 a:link, a:visited, a:hover, a:active {
 	text-decoration:none;
