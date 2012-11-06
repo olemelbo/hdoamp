@@ -14,11 +14,11 @@
 		<div id="pen-icon">
 		</div>
 		<div id="slogan">
-			<p>Husk å være snill og grei, ellers blir det ingen debatt på deg!</p>
+			<p>Husk &aring; v&aelig;re snill og grei, ellers blir det ingen debatt p&aring; deg!</p>
 		</div>
 		<div id="nav">
 			<h3>SISTE</h3>
-			<h3>POPULÆRE</h3>
+			<h3>POPUL&AElig;RE</h3>
 			<h3>ARKIV</h3>
 		</div>
 	</div><!-- #pen-wrapper -->
@@ -55,7 +55,7 @@
 						</div>
 						<div class="post_comment">
 							<input type="image" src="images/pen_icon.png" alt="Submit" width="35" height="35" class="post_comment" id="<?php echo $post['id']; ?>"></button>
-							<p>Kommentér</p>
+							<p>Kommenter</p>
 						</div>	
 					</div>
 					<div class="numberOfComments">
@@ -70,13 +70,13 @@
 	</div><!--end content post -->
 	<div id="sidebar">
 		<div id="sidebar_head">
-			<h2 class="mnd">Månedens</h2>
+			<h2 class="mnd">M&aring;nedens</h2>
 			<h2 class="deb">debattant</h2>
 		</div>
 		<div id="sidebar_content">
 			<p>1. Pernille Hellesvik</p>
 			<p>2. Ole Christian Melbostad</p>
-			<p>3. Alexander Tømmerholen</p>
+			<p>3. Alexander T&oslash;mmerholen</p>
 			<p>4. Marte Johnsen</p>
 		</div>
 	</div><!-- end sidebar -->
