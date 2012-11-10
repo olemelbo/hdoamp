@@ -50,7 +50,7 @@
 							<p>Gi feedback</p>
 						</div>
 						<div class="post_statistic">
-							<input type="image" src="images/graph_icon.png" alt="Submit" width="35" height="35" class="post_statistic" id="<?php echo $post['id']; ?>"></button>
+							<input type="image" src="images/graph_icon.png" alt="Submit" width="35" height="35" class="post_statistic_button" id="<?php echo $post['id']; ?>"></button>
 							<p>Se statistikk</p>
 						</div>
 						<div class="post_comment">
@@ -159,7 +159,7 @@
 			<input type="checkbox"name="well_written" />
 			<label for="disagree">Uenig:</label>
 			<input type="checkbox" name="disagree" />
-			<label for="unserious">Useriøst:</label>
+			<label for="unserious">Useri&oslash;st:</label>
 			<input type="checkbox" name="unserious" />
 		</form>
 		<div class="feedback_buttons">
