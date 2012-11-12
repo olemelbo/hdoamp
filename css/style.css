@@ -191,6 +191,7 @@ h2 {
 	width: 525px;
 	max-width: 525px;
 	margin: 10px;
+	padding: 20px;
 }
 
 #comment_content p {
@@ -335,6 +336,11 @@ color: #ba330d;
 	background-color: #C3BEBE;
 	margin: 20px;
 	width:40%;
+}
+
+.new_comment {
+	background-color: #C3BEBE;
+	margin: 20px;
 }
 
 .post_alternatives {
