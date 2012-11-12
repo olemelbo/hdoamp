@@ -7,10 +7,27 @@ class Post_comments_model extends CI_Model {
 		return $comments_query;	
 	}	
 	
-	function setNewComment($uid, $comment_text, $innlegg_id) {
-		$sql = "INSERT INTO kommentar ";
-		$response['response'] = "ok";
-		$response['msg'] = "Ny kommentar ble lagt til";
+	function setNewComment($uid, $comment_text, $post_id) {
+		if(empty($comment_text)) {
+			$response['response'] = "error";
+			$response['error'] = "Du må skrive inn tekst";
+			echo json_encode($response);
+			die();
+		}
+		
+		$sql = "INSERT INTO kommentar (innlegg_id, user_id, comment_text) VALUES (?,?,?)";
+		$this->db->query($sql, array($post_id, $uid, $comment_text));
+		
+		$errtxt = $this->db->_error_message();
+		
+		if (!empty ($errtxt) ) {
+			$response['response'] = "error";
+			$response['error'] = "Det skjedde noe feil prøv på nytt";
+		} else {
+			$response['response'] = "ok";
+			$response['msg'] = "Innlegget ble lagret";
+		}
+		
 		echo json_encode($response);	
 	}
 

@@ -17,7 +17,7 @@
 	
 	<div id="content_post">
 		<div id="post">
-			<div id="post_id" style="display:none"><?php echo $entire_post['<id']; ?></div>
+			<div id="post_id" style="display:none"><?php echo $entire_post['id']; ?></div>
 			<div id="post_author">
 				<?php if(empty($entire_post['image_link'])) : ?>
 						<div id="post_picture"><a href="#"><img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" id="<?php echo $entire_post['user_id']; ?>" /></a></div>	

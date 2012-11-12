@@ -16,7 +16,8 @@ jQuery(document).ready(function($){
 				success : function (data) {
 					data = $.parseJSON(data);
 					if(data.response == "ok") {
-						
+						location.reload();
+						window.scrollTo(0, document.body.scrollHeight);
 					} else {
 						alert(data.error);
 					}

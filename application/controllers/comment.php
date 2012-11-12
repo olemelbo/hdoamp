@@ -6,8 +6,14 @@
 	function validate_comment() {
 		$session = $this->session->userdata('uid');
 		if($session) {
+			//Get user_id
+			
+			$this->load->model('user_model');
+			$this->user_model->instantiateUserInfo($session);
+			$user_id = $this->user_model->getUserId();
+			
 			$this->load->model('post_comments_model');
-			$this->post_comments_model->setNewComment($session, $_POST['comment_text'], $_POST['innlegg_id']);
+			$this->post_comments_model->setNewComment($user_id, $_POST['comment_text'], $_POST['innlegg_id']);
 		} else {
 			$data["main_content"] = "home";
 			$this->load->model('post_model');
