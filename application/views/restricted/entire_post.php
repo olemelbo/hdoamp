@@ -35,15 +35,22 @@
 		</div>
 		
 		</div><!--post-->
+		<?php print_r($comments); ?>
+		<?php foreach($comments as $comment) : ?>
 		<div class="post_comment">
-			<?php print_r($comments); ?>
-			<?php foreach($comments as $comment) : ?>
-				<div id="comment_<?php echo $comment['id']; ?>">
-					<?php echo $comment['comment_text']; ?>
-					<?php echo $comment['date']; ?>
+			<div id="comment_<?php echo $comment['id']; ?>">
+				<?php if(empty($entire_post['image_link'])) : ?>
+					<div id="comment_picture"><a href="#"><img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" id="<?php echo $comment['user_id']; ?>" /></a></div>	
+				<?php else : ?>
+
+				<?php endif; ?>
+				<?php echo $comment['comment_text']; ?>
+				<?php echo $comment['date']; ?>
 				</div>
-			<?php endforeach; ?>
 		</div>
+		<div class="clear_both"></div>
+		<?php endforeach; ?>
+		
 	</div><!--end content_post-->
 	
 	<div id="sidebar">

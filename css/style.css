@@ -235,7 +235,7 @@ color: #ba330d;
 	padding-bottom: 0px;
 }
 
-#post_picture img {
+#post_picture img, #comment_picture img {
 	float:left;
 	padding: 15px;
 	padding-bottom: 0px;
@@ -314,6 +314,11 @@ color: #ba330d;
 	height: 25px;
 	margin-right: 7px;
 	padding: 0;
+}
+
+.post_comment {
+	background: #000000;
+	margin: 20px;
 }
 
 .post_alternatives {
