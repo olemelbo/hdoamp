@@ -219,7 +219,7 @@ h2 {
 	margin-left: 25px;
 }
 
-.post_comment, .post_statistic, .post_statistic_button {
+.post_comment, .post_statistic, .post_statistic_button, .comment_feedback_button, .comment_statistic_button {
 	float: left;
 	margin-left: 25px;
 }
@@ -233,10 +233,14 @@ color: #ba330d;
 	padding: 20px;
 }
 
-.post_bar, .entire_post_bar {
+.post_bar, .entire_post_bar, .comment_bar {
 	position:absolute;
 	bottom:0px;
 	width:100%;
+}
+
+.comment_bar {
+	margin-top: 200px;
 }
 
 .post_truncated {
@@ -290,7 +294,7 @@ color: #ba330d;
 	background-color:#ADA9A9;
 }
 
-.comment {
+.post_comment {
 	width: 40%;
 	position: relative;
 	margin: 20px;

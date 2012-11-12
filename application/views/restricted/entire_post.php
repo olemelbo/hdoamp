@@ -55,7 +55,7 @@
 				</div>
 				<div class="comment_bar">
 					<div class="comment_feedback">
-							<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" alt="Submit" width="35" height="35" class="comment_feedback_button" id="<?php echo $comment['id']; ?>  />
+							<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" alt="Submit" width="35" height="35" class="comment_feedback_button" id="<?php echo $comment['id']; ?>"  />
 							<p>Gi feedback</p>
 						</div>
 						<div class="comment_statistic">
