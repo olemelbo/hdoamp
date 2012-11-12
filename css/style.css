@@ -203,12 +203,12 @@ h2 {
 	margin-left: 25px;
 }
 
-.post_comment, .post_statistic {
+.post_comment, .post_statistic_button {
 	float: left;
 	margin-left: 25px;
 }
 
-.post_feedback p, .post_comment p, .post_statistic p {
+.post_feedback p, .post_comment p, .post_statistic_button p {
 font-size: 0.8em;
 color: #ba330d;
 }

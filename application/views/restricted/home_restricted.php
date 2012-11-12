@@ -49,7 +49,7 @@
 							<input type="image" src="images/feedback_icon.png" alt="Submit" width="35" height="35" class="post_feedback"></button>
 							<p>Gi feedback</p>
 						</div>
-						<div class="post_statistic">
+						<div class="post_statistic_button">
 							<input type="image" src="images/graph_icon.png" alt="Submit" width="35" height="35" class="post_statistic_button" id="<?php echo $post['id']; ?>"></button>
 							<p>Se statistikk</p>
 						</div>
