@@ -30,9 +30,9 @@
 			</div><!--end post_content-->
 		</div><!-- end post_author-->
 		<div class="entire_post_bar">
-			<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" class="post_feedback" id="<?php echo $entire_post['id']; ?>" />
+			<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" class="post_feedback_button" id="<?php echo $entire_post['id']; ?>" />
 			<p>Gi feedback</p>
-			<input type="image" src="<?php echo base_url(); ?>images/graph_icon.png" class="post_statistic" id="<?php echo $entire_post['id']; ?>" />
+			<input type="image" src="<?php echo base_url(); ?>images/graph_icon.png" class="post_statistic_button" id="<?php echo $entire_post['id']; ?>" />
 			<p>Se statistikk</p>
 		</div>
 		
@@ -48,6 +48,7 @@
 	
 					<?php endif; ?>
 				</div>
+				<h2><?php echo $comment['full_name']; ?></h2>
 				<div id="comment_content">
 					<p><?php echo $comment['comment_text']; ?></p>
 					<p><?php echo $comment['date']; ?></p>
@@ -68,7 +69,6 @@
 		<?php endforeach; ?>
 		<div class="new_comment">
 			<h2>Skriv ny kommentar</h2>
-			<label for="comment_text_label">Innlegg:</label> <br />
 			<textarea id="comment_text"></textarea>
 			<br /><br />
 			<button id="save_comment_btn">Lagre</button>

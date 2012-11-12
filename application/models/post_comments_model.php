@@ -57,4 +57,16 @@ class Post_comments_model extends CI_Model {
 		}
 	}	
 	
+	function fullName($user_id) {
+		$sql = "SELECT fnavn, enavn FROM bruker WHERE id = ?";
+		$query = $this->db->query($sql, array($user_id));
+		
+		foreach($query->result_array() as $user) {
+			$this->fname = $user['fnavn'];
+			$this->ename = $user['enavn']; 
+		}
+		
+		return $this->fname . " " . $this->ename;
+	}
+	
 }

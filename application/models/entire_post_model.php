@@ -1,6 +1,7 @@
 <?php 
 class Entire_post_model extends CI_Model {
-		
+	private $fname;
+	private $ename;
 	function getEntirePost($post_id) {
 		$sql = "SELECT * FROM innlegg WHERE id=?";
 		$query = $this->db->query($sql, array($post_id));

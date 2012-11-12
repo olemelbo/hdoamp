@@ -22,6 +22,7 @@
 				$data['comments'][$comment['id']]['id'] = $comment['id'];
 				$data['comments'][$comment['id']]['innlegg_id'] = $comment['innlegg_id'];
 				$data['comments'][$comment['id']]['user_id'] = $comment['user_id'];
+				$data['comments'][$comment['id']]['full_name'] = $this->post_comments_model->fullName($comment['user_id']);
 				$data['comments'][$comment['id']]['comment_text'] = $comment['comment_text'];
 				$data['comments'][$comment['id']]['date'] = $comment['date'];
 			}
