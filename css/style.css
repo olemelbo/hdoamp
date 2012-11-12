@@ -193,6 +193,10 @@ h2 {
 	margin: 10px;
 }
 
+#comment_content p {
+	color:black;
+}
+
 #profile_buttons {
 	padding-top: 50px;
 }

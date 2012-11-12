@@ -15,8 +15,8 @@ class Post_comments_model extends CI_Model {
 			die();
 		}
 		
-		$sql = "INSERT INTO kommentar (innlegg_id, user_id, comment_text) VALUES (?,?,?)";
-		$this->db->query($sql, array($post_id, $uid, $comment_text));
+		$sql = "INSERT INTO kommentar (innlegg_id, user_id, comment_text, date) VALUES (?,?,?,?)";
+		$this->db->query($sql, array($post_id, $uid, $comment_text, date("Y-m-d H:i:s")));
 		
 		$errtxt = $this->db->_error_message();
 		
