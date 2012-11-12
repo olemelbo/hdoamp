@@ -103,13 +103,12 @@ jQuery(document).ready(function($){
 	
 	$(".comment_statistic_button").live("click", function() {
 	 	comment_statistic_id = this.id;
-	 	alert(comment_statistic_id);
 	 	data = {
 	 		post_id : comment_statistic_id
 	 	}
 	 	var siteURL = $("#siteurl p").text();
-	 	/*$.ajax ({
-				url : siteURL + "/statistics/get_statistics",
+	 	$.ajax ({
+				url : siteURL + "/statistics/get_comment_statistics",
 				type : 'POST',
 				data : data,
 				success : function (data) {
@@ -203,7 +202,6 @@ jQuery(document).ready(function($){
 				
 			}); 
 			
-			*/
 	});
 	
 	$(".close_statistics_btn").click(function() { 

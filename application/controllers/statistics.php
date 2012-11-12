@@ -8,4 +8,9 @@ class Statistics extends CI_Controller {
 		$this->load->model('statistics_model');
 		$this->statistics_model->getChartById($_POST['post_id']);
 	}
+	
+	function get_comment_statistics() {
+		$this->load->model('statistics_model');
+		$this->statistics_model->getCommentChartById($_POST['post_id']);
+	}
 }
