@@ -29,27 +29,46 @@
 			</div><!--end post_content-->
 		</div><!-- end post_author-->
 		<div class="entire_post_bar">
-			<button type="button" class="post_reports">Rapporter</button>
-			<button type="button" class="post_feedback" id="<?php echo $entire_post['id']; ?>">Feedback</button>
-			<button type="button" class="post_statistic" id="<?php echo $entire_post['id']; ?>">Statestikk</button>
+			<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" class="post_feedback" id="<?php echo $entire_post['id']; ?>" />
+			<p>Gi feedback</p>
+			<input type="image" src="<?php echo base_url(); ?>images/graph_icon.png" class="post_statistic" id="<?php echo $entire_post['id']; ?>" />
+			<p>Se statistikk</p>
 		</div>
 		
 		</div><!--post-->
-		<?php print_r($comments); ?>
+		<?php if(isset($comments)) : ?>
 		<?php foreach($comments as $comment) : ?>
 		<div class="post_comment">
 			<div id="comment_<?php echo $comment['id']; ?>">
-				<?php if(empty($entire_post['image_link'])) : ?>
-					<div id="comment_picture"><a href="#"><img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" id="<?php echo $comment['user_id']; ?>" /></a></div>	
-				<?php else : ?>
-
-				<?php endif; ?>
-				<?php echo $comment['comment_text']; ?>
-				<?php echo $comment['date']; ?>
+				<div id="comment_author">
+					<?php if(empty($entire_post['image_link'])) : ?>
+						<div id="comment_picture"><a href="#"><img src="<?php echo base_url()?>images/profile.jpg" alt="profile_picure" id="<?php echo $comment['user_id']; ?>" /></a></div>	
+					<?php else : ?>
+	
+					<?php endif; ?>
 				</div>
+				<div id="comment_content">
+					<p><?php echo $comment['comment_text']; ?></p>
+					<p><?php echo $comment['date']; ?></p>
+				</div>
+				<div class="comment_bar">
+					<div class="comment_feedback">
+							<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" alt="Submit" width="35" height="35" class="comment_feedback_button" />
+							<p>Gi feedback</p>
+						</div>
+						<div class="comment_statistic">
+							<input type="image" src="<?php echo base_url(); ?>images/graph_icon.png" alt="Submit" width="35" height="35" class="comment_statistic_button" id="<?php echo $comment['id']; ?>" />
+							<p>Se statistikk</p>
+						</div>
+				</div>
+			</div>
 		</div>
 		<div class="clear_both"></div>
 		<?php endforeach; ?>
+		<?php else : ?>
+			<?php echo "Det finnes ingen kommentarer"; ?>
+		<?php endif; ?>
+		
 		
 	</div><!--end content_post-->
 	

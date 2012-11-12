@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){ 
 	var post_id;
-	$(".post_feedback").live("click", function() {
+	$(".post_feedback_button").live("click", function() {
 	 	$(".feedback_panel").fadeIn(300);
 	 	post_id = this.id;
 	});

@@ -317,8 +317,9 @@ color: #ba330d;
 }
 
 .post_comment {
-	background: #000000;
+	background-color: #C3BEBE;
 	margin: 20px;
+	width:40%;
 }
 
 .post_alternatives {

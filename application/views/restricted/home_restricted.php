@@ -46,17 +46,13 @@
 				<div class="post_bar">
 					<div class="post_alternatives">
 						<div class="post_feedback">
-							<input type="image" src="images/feedback_icon.png" alt="Submit" width="35" height="35" class="post_feedback"></button>
+							<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" alt="Submit" width="35" height="35" class="post_feedback_button"></button>
 							<p>Gi feedback</p>
 						</div>
 						<div class="post_statistic">
-							<input type="image" src="images/graph_icon.png" alt="Submit" width="35" height="35" class="post_statistic_button" id="<?php echo $post['id']; ?>"></button>
+							<input type="image" src="<?php echo base_url(); ?>images/graph_icon.png" alt="Submit" width="35" height="35" class="post_statistic_button" id="<?php echo $post['id']; ?>"></button>
 							<p>Se statistikk</p>
 						</div>
-						<div class="post_comment">
-							<input type="image" src="images/pen_icon.png" alt="Submit" width="35" height="35" class="post_comment" id="<?php echo $post['id']; ?>"></button>
-							<p>Kommenter</p>
-						</div>	
 					</div>
 					<div class="numberOfComments">
 						<p><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>"><img src='<?php echo base_url(); ?>images/speechbubble.png' id="comments_pic" /><?php echo $post['numberOfComments'] ?> kommentarer</a></p>
