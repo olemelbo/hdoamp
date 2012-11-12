@@ -36,35 +36,12 @@
 		
 		</div><!--post-->
 		<div class="post_comment">
-			<?php print_r($comment_parents); ?>
-			<?php foreach($comment_error as $key => $value) : ?>
-				<?php if($value == "error") : ?>
-					<p>Det finnes ingen kommentarer. Hver den første til å kommentere</p>
-				<?php else : ?>
-					<div id="comment_author">
-					<?php print_r($comments); ?>
-					<?php foreach($comments as $comment) : ?>
-						<div class="parent_comment">
-								<div id="comment_author">
-									<?php if(empty($entire_post['image_link'])) : ?><!-- Må rettes paa-->
-										<div id="post_picture"><a href="#"><img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" id="<?php echo $comment['user_id']; ?>" /></a></div>	
-									<?php else : ?>
-								
-									<?php endif; ?>
-								</div>
-								<h3>Brukernavn</h3>
-								<p><?php echo $comment['date']; ?></p>
-								<p class="comment_text"><?php echo $comment['comment_text']; ?></p>
-			
-							<div class="comments_post_bar">
-							<button type="button" class="comment_reports">Rapporter</button>
-								<button type="button" class="comment_feedback" id="<?php echo $comment['id']; ?>">Feedback</button>
-								<button type="button" class="comment_statistic" id="<?php echo $comment['id']; ?>">Statestikk</button>
-							</div>
-						</div>
-						<div class="clear_both"></div>
-					<?php endforeach; ?>
-				<?php endif; ?>
+			<?php print_r($comments); ?>
+			<?php foreach($comments as $comment) : ?>
+				<div id="comment_<?php echo $comment['id']; ?>">
+					<?php echo $comment['comment_text']; ?>
+					<?php echo $comment['date']; ?>
+				</div>
 			<?php endforeach; ?>
 		</div>
 	</div><!--end content_post-->

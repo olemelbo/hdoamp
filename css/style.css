@@ -217,7 +217,7 @@ color: #ba330d;
 	padding: 20px;
 }
 
-.post_bar {
+.post_bar, .entire_post_bar {
 	position:absolute;
 	bottom:0px;
 	width:100%;
@@ -284,15 +284,6 @@ color: #ba330d;
 #comment_picture {
 	float:left;
 	margin-right: 5px;    
-}
-
-
-.entire_post_bar, .comments_post_bar {
-	margin-top: 20px;
-	position:absolute;
-	bottom:0px;
-	background-color:black;
-	width:100%;
 }
 
 .comment_text {

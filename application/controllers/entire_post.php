@@ -17,9 +17,15 @@
 			}
 			
 			$this->load->model("post_comments_model");
-			$this->post_comments_model->initializePostComments($this->uri->segment(3));
-			$data['comment_parents'] = $this->post_comments_model->getCommentParents();
-			$data['comment_children'] = $this->post_comments_model->getCommentChildren();
+			$comment_query = $this->post_comments_model->getPostComments($this->uri->segment(3));
+			foreach($comment_query->result_array() as $comment) {
+				$data['comments'][$comment['id']]['id'] = $comment['id'];
+				$data['comments'][$comment['id']]['innlegg_id'] = $comment['innlegg_id'];
+				$data['comments'][$comment['id']]['user_id'] = $comment['user_id'];
+				$data['comments'][$comment['id']]['comment_text'] = $comment['comment_text'];
+				$data['comments'][$comment['id']]['date'] = $comment['date'];
+			}
+			
 			//User Info
 			$this->load->model("user_model");
 			$this->user_model->instantiateUserInfo($session);
