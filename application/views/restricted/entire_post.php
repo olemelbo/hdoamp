@@ -65,8 +65,21 @@
 		</div>
 		<div class="clear_both"></div>
 		<?php endforeach; ?>
+		<div class="new_comment">
+			<h2>Skriv ny kommentar</h2>
+			<label for="comment_text_label">Innlegg:</label> <br />
+			<textarea id="comment_text"></textarea>
+			<br /><br />
+			<button id="save_comment_btn">Lagre</button>
+		</div>
 		<?php else : ?>
-			<?php echo "Det finnes ingen kommentarer"; ?>
+			<div class="new_comment">
+			<h2>Skriv ny kommentar</h2>
+			<label for="comment_text_label">Innlegg:</label> <br />
+			<textarea id="comment_text"></textarea>
+			<br /><br />
+			<button id="save_comment_btn">Lagre</button>
+		</div>
 		<?php endif; ?>
 		
 		

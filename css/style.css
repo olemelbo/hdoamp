@@ -186,6 +186,13 @@ h2 {
 	width:525px;
 }
 
+#comment_text {
+	height: 257px;
+	width: 525px;
+	max-width: 525px;
+	margin: 10px;
+}
+
 #profile_buttons {
 	padding-top: 50px;
 }
@@ -316,7 +323,7 @@ color: #ba330d;
 	padding: 0;
 }
 
-.post_comment {
+.post_comment, .new_comment {
 	background-color: #C3BEBE;
 	margin: 20px;
 	width:40%;
