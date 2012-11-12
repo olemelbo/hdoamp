@@ -6,6 +6,13 @@ class Post_comments_model extends CI_Model {
 		$comments_query = $this->db->query($sql, array($post_id));
 		return $comments_query;	
 	}	
+	
+	function setNewComment($uid, $comment_text, $innlegg_id) {
+		$sql = "INSERT INTO kommentar ";
+		$response['response'] = "ok";
+		$response['msg'] = "Ny kommentar ble lagt til";
+		echo json_encode($response);	
+	}
 
 	function getCommentAuthor($user_id) {
 		$sql = "SELECT * FROM bruker WHERE id = ?";	
