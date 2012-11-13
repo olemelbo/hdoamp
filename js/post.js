@@ -3,6 +3,10 @@ jQuery(document).ready(function($){
 	 	$("#new_post_panel").fadeIn(300);
 	});
 	
+	$("#pen-line").click(function() { 
+	 	$("#new_post_panel").fadeIn(300);
+	});
+	
 	var siteURL = $("#siteurl p").text();
 	$("#save_post_btn").click(function() {
 		var data = { 
