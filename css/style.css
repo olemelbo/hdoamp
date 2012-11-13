@@ -307,10 +307,11 @@ color: #ba330d;
 }
 
 #post {
-	width: 40%;
+	width: 70%;
 	position: relative;
 	margin: 20px;
 	background-color:#ADA9A9;
+	height: 200px;
 }
 
 .post_comment {
@@ -318,6 +319,7 @@ color: #ba330d;
 	position: relative;
 	margin: 20px;
 	background-color:#B9B6B6;
+	height: 220px;
 }
 
 #comment_picture {
@@ -364,6 +366,7 @@ color: #ba330d;
 .new_comment {
 	background-color: #C3BEBE;
 	margin: 20px;
+	width: 70%;
 }
 
 .post_alternatives {
