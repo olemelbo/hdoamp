@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/lightbox.css" />
 	<link href='http://fonts.googleapis.com/css?family=Patrick+Hand' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
 	<script language="javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script language="javascript" src="<?php echo base_url(); ?>js/login.js"></script>
 	<script language="javascript" src="<?php echo base_url(); ?>js/logout.js"></script>

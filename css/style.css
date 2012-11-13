@@ -9,7 +9,7 @@ p, label {
 }
 
 h2 {
-	font-family: Georgia, Helvetica, Arial, sans-serif;
+	font-family: Bitter, Georgia, Helvetica, Arial, sans-serif;
 }
 
 .deb {
@@ -162,7 +162,8 @@ h2 {
 }
 
 #logo {
-	float: left;	
+	float: left;
+	height: 100px;
 }
 
 #logo h1 {
@@ -381,7 +382,7 @@ color: #ba330d;
 a:link, a:visited, a:hover, a:active {
 	text-decoration:none;
 	color: #b82f11;
-	font-family: Georgia, Helvetica, Arial, sans-serif;
+	font-family: Bitter, Georgia, Helvetica, Arial, sans-serif;
 }
 a:hover {text-decoration:underline;}
 a:active {text-decoration:underline;}
