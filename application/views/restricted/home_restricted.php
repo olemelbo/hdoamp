@@ -11,8 +11,14 @@
 		</div>
 	</div><!-- end header-->	
 	<div id="pen-wrapper">
+		
+		<div id="pen-line">
+			<p>Skriv et innlegg</p>
+		</div>
+		
 		<div id="pen-icon">
 		</div>
+		
 		<div id="slogan">
 			<p>Husk &aring; v&aelig;re snill og grei, ellers blir det ingen debatt p&aring; deg!</p>
 		</div>

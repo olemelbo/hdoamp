@@ -73,9 +73,27 @@ h2 {
 
 #pen-icon {
 	background: url(../images/pen.png);
-	width: 80px;
-	height: 80px;
+	width: 50px;
+	height: 50px;
 	float: left;
+}
+
+#pen-line {
+	background: url(../images/line.png);
+	background-repeat: no-repeat;
+	height: 30px;
+	width: 140px;
+	float: left;
+	margin-top: 30px;
+}
+
+#pen-line p {
+	position: relative;
+	height: auto;
+	width: auto;
+	bottom: 18px;
+	float: left;
+	margin-left: 18px;
 }
 
 #nav {
