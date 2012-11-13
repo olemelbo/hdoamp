@@ -72,7 +72,7 @@ h2 {
 }
 
 #pen-icon {
-	background: url(../images/pen.png);
+	background: url(../images/minipen.png);
 	width: 50px;
 	height: 50px;
 	float: left;
@@ -95,6 +95,7 @@ h2 {
 	float: left;
 	margin-left: 12px;
 	font-family: 'Patrick Hand', cursive;
+	font-size: 1.2em;
 }
 
 #nav {
