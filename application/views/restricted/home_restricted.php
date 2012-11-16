@@ -59,10 +59,6 @@
 							<input type="image" src="<?php echo base_url(); ?>images/graph_icon.png" alt="Submit" width="35" height="35" class="post_statistic_button" id="<?php echo $post['id']; ?>"></button>
 							<p>Se statistikk</p>
 						</div>
-						<div class="post_comment_button">
-							<input type="image" src="<?php echo base_url(); ?>images/pen_icon.png" alt="Submit" width="35" height="35" class="post_comment_button" id="<?php echo $post['id']; ?>"></button>
-							<p>Kommentér</p>
-						</div>
 					</div>
 					<div class="numberOfComments">
 						<p><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>"><img src='<?php echo base_url(); ?>images/speechbubble.png' id="comments_pic" /><?php echo $post['numberOfComments'] ?> kommentarer</a></p>
