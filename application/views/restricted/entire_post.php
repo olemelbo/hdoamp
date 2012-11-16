@@ -112,7 +112,7 @@
 				<p>Dine siste innlegg:</p>
 				<ul>
 					<?php foreach($user_posts as $key => $value) : ?>
-						<li><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $key?>""><?php echo $value; ?></a></li>
+						<li><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $key?>"><?php echo $value; ?></a></li>
 					<?php endforeach; ?>
 				</ul>
 			</div><!-- end user_last_posts-->
@@ -159,6 +159,28 @@
 		<div class="feedback_buttons">
 			<button class="save_feedback_btn">Lagre</button>
 			<button class="close_feedback_btn">Lukk</button>
+		</div>
+	</div>
+	
+	<div class="comment_feedback_panel" style="display:none;">
+		<h1>Gi din feedback til innlegget</h1>
+		<form method="post" action="#" id="post_feedback">
+			<label for="agree">Enig:</label>
+			<input type="checkbox" name="agree" />
+			<label for="relevant">Relevant:</label>
+			<input type="checkbox" name="relevant" />
+			<label for="informative">Informativt:</label>
+			<input type="checkbox" name="informative" />
+			<label for="well_written">Godt skrevet:</label>
+			<input type="checkbox"name="well_written" />
+			<label for="disagree">Uenig:</label>
+			<input type="checkbox" name="disagree" />
+			<label for="unserious">Useriøst:</label>
+			<input type="checkbox" name="unserious" />
+		</form>
+		<div class="feedback_buttons">
+			<button class="save_comment_feedback_btn">Lagre</button>
+			<button class="close_comment_feedback_btn">Lukk</button>
 		</div>
 	</div>
 	

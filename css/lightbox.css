@@ -11,7 +11,7 @@
 
 }
 
-.post_user_panel, .feedback_panel, .statistics_panel, #new_post_panel, #user_panel {
+.post_user_panel, .feedback_panel, .statistics_panel, #new_post_panel, #user_panel, .comment_feedback_panel {
 	display:none;  
  	position:fixed;  
  	top:100px;  
