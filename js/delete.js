@@ -20,8 +20,7 @@ jQuery(document).ready(function($) {
 				type : 'POST',
 				data : data,
 				success : function (data) {
-					
-					//location.reload();
+					location.reload();
 				}
 				
 		});
