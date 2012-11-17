@@ -240,9 +240,18 @@ h2 {
 	margin-left: 25px;
 }
 
-.post_comment_button, .post_statistic, .post_statistic_button, .post_feedback_button, .post_statistic_button {
+.post_comment_button, .post_statistic, .post_statistic_button, .post_feedback_button, .post_statistic_button, .comment_feedback, .comment_statistics{
 	float: left;
 	margin-left: 25px;
+}
+
+.comment_feedback {
+	margin-right: 50px;
+}
+
+#comment_content {
+	min-height: 120px;
+    padding: 0 20px 80px;
 }
 
 .post_feedback p, .post_comment_button p, .post_statistic p, .post_statistic_button p {
@@ -258,10 +267,6 @@ color: #ba330d;
 	position:absolute;
 	bottom:0px;
 	width:100%;
-}
-
-.comment_bar {
-	margin-top: 200px;
 }
 
 .post_truncated {
@@ -320,7 +325,6 @@ color: #ba330d;
 	position: relative;
 	margin: 20px;
 	background-color:#B9B6B6;
-	height: 220px;
 }
 
 #comment_picture {
@@ -393,6 +397,7 @@ a:active {text-decoration:underline;}
  	right: 78px;
  	width: 200px;
 }
+
 .form-wrapper #search {
         width: 330px;
         height: 20px;

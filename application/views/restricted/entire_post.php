@@ -50,8 +50,8 @@
 				</div>
 				<h2><?php echo $comment['full_name']; ?></h2>
 				<div id="comment_content">
+					<h3><?php echo $comment['date']; ?></h3>
 					<p><?php echo $comment['comment_text']; ?></p>
-					<p><?php echo $comment['date']; ?></p>
 				</div>
 				<div class="comment_bar">
 					<div class="comment_feedback">
