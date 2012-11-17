@@ -57,6 +57,18 @@ class Post_comments_model extends CI_Model {
 		}
 	}	
 	
+	function getCommentAuthorId($user_id) 
+	{
+		$sql = "SELECT id FROM bruker WHERE studnr =?";
+		$query = $this->db->query($sql, array($user_id));
+		
+		foreach($query->result_array() as $user) {
+			$id = $user['id'];
+		}
+		
+		return $id;
+	}
+	
 	function fullName($user_id) {
 		$sql = "SELECT fnavn, enavn FROM bruker WHERE id = ?";
 		$query = $this->db->query($sql, array($user_id));

@@ -372,7 +372,7 @@ color: #ba330d;
 	padding: 0;
 }
 
-.post_comment, .new_comment {
+.post_comment {
 	background-color: #C3BEBE;
 	margin: 20px;
 	width:40%;
@@ -381,7 +381,21 @@ color: #ba330d;
 .new_comment {
 	background-color: #C3BEBE;
 	margin: 20px;
-	width: 70%;
+	width: 50%;
+}
+
+.new_comment h2 {
+	padding-top: 15px;
+}
+
+.delete_comment {
+	float:right;
+}
+
+.delete_comment_button {
+	width: 25px;
+	height:25px;
+	padding: 5px;
 }
 
 .post_alternatives {

@@ -43,9 +43,15 @@
 		</div>
 		
 		</div><!--post-->
+	
 		<?php if(isset($comments)) : ?>
 		<?php foreach($comments as $comment) : ?>
 		<div class="post_comment">
+			<?php if(isset($comment['author'])) : ?>
+			<div class="delete_comment">
+				<input type="image" src="<?php echo base_url(); ?>images/delete_icon.png" alt="Delete comment" class="delete_comment_button" id="<?php echo $comment['id']; ?>" />
+				</div>
+			<?php endif; ?>
 			<div id="comment_<?php echo $comment['id']; ?>">
 				<div id="comment_author">
 					<?php if(empty($entire_post['image_link'])) : ?>
