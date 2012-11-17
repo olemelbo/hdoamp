@@ -3,4 +3,8 @@
 		$sql = "DELETE FROM kommentar WHERE id = ?";
 		$this->db->query($sql, array($comment_id));
 	}
+	
+	function delete_user_post($post_id) {
+		
+	}
 }

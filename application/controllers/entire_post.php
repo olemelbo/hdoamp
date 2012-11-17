@@ -19,7 +19,6 @@
 			$this->load->model("post_comments_model");
 			$comment_query = $this->post_comments_model->getPostComments($this->uri->segment(3));
 			$areYouThePostAuthor = $this->post_comments_model->getCommentAuthorId($session);
-			echo $areYouThePostAuthor;
 			foreach($comment_query->result_array() as $comment) {
 				$data['comments'][$comment['id']]['id'] = $comment['id'];
 				$data['comments'][$comment['id']]['innlegg_id'] = $comment['innlegg_id'];
