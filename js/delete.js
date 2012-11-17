@@ -9,6 +9,7 @@ jQuery(document).ready(function($) {
 	$(".delete_post_button").live("click", function() {
 		id= this.id;
 		$('#delete_post_window').dialog({ resizable: false});	
+	
 	});
 	
 	
@@ -38,7 +39,7 @@ jQuery(document).ready(function($) {
 				type : 'POST',
 				data : data,
 				success : function (data) {
-					location.reload();
+					//location.reload();
 				}
 				
 		});

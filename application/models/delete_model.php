@@ -5,6 +5,7 @@
 	}
 	
 	function delete_user_post($post_id) {
-		
+		$sql = "DELETE FROM innlegg WHERE id = ?";
+		$this->db->query($sql, array($post_id));
 	}
 }
