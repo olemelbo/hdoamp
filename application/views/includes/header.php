@@ -23,6 +23,7 @@
 	<script language="javascript" src="<?php echo base_url(); ?>js/show_entire_post.js"></script>
 	<script language="javascript" src="<?php echo base_url(); ?>js/post_profile_picture.js"></script>
 	<script language="javascript" src="<?php echo base_url(); ?>js/comment.js"></script>
+	<script language="javascript" src="<?php echo base_url(); ?>js/delete.js"></script>
 	<script language="javascript" src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 	
 </head>

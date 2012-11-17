@@ -196,6 +196,16 @@
 		</div>
 	</div>
 	
+	<div id="logout_window" title="Er du sikker på at du vil logge ut?" style="display:none;">
+			<button type="button" id="logout_submit" name="logout">Ja</button>
+			<button type="button" id="logout_cancel" name="logout">Avbryt</button>	       
+	</div>
+	
+	<div id="delete_window" title="Er du sikker på at du vil slette?" style="display:none;">
+			<button type="button" id="delete_comment_submit" name="slett">Ja</button>
+			<button type="button" id="delete_cancel" name="cancel">Avbryt</button>	       
+	</div>
+	
 	<div class="statistics_panel" style="display:none">
 		<div id="statistics_high_chart_target">
 			
