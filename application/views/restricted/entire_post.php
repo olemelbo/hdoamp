@@ -24,16 +24,22 @@
 				<?php else : ?>
 					
 				<?php endif; ?>
+			</div><!-- end post_author-->
+			
 			<div id="post_content">
 				<h2><?php echo $entire_post["tittel"]; ?></h2>
 				<p><?php echo $entire_post["in_text"]; ?></p>
 			</div><!--end post_content-->
-		</div><!-- end post_author-->
+		
 		<div class="entire_post_bar">
-			<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" class="post_feedback_button" id="<?php echo $entire_post['id']; ?>" />
-			<p>Gi feedback</p>
-			<input type="image" src="<?php echo base_url(); ?>images/graph_icon.png" class="post_statistic_button" id="<?php echo $entire_post['id']; ?>" />
-			<p>Se statistikk</p>
+			<div class="post_feedback">
+				<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" class="post_feedback_button" id="<?php echo $entire_post['id']; ?>" />
+				<p>Gi feedback</p>
+			</div>
+			<div class="post_statistic">
+				<input type="image" src="<?php echo base_url(); ?>images/graph_icon.png" class="post_statistic_button" id="<?php echo $entire_post['id']; ?>" />
+				<p>Se statistikk</p>
+			</div>
 		</div>
 		
 		</div><!--post-->

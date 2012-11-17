@@ -40,13 +40,15 @@
 				<?php endif; ?>
 				<h2><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>"><?php  echo $post['tittel'] ?></a></h2>
 				
+				<?php if(!empty($post['date'])) : ?>
+					<h3><?php echo $post['date']; ?></h3>
+				<?php endif; ?>
+				
 				<?php if(!empty($post['hashtags'])) : ?>
 					<p class="hashtags"><?php foreach($post['hashtags'] as $p) { echo "<a href='#'>#".$p . " " . "</a>"; } ?> </p>
 				<?php endif; ?>
 				
-				<?php if(!empty($post['date'])) : ?>
-					<p><?php echo $post['date']; ?></p>
-				<?php endif; ?>
+				
 				
 				<p class="post_truncated"><?php echo $truncated = substr($post['in_text'], 0, 250) . '...' ?></p>
 				<div class="post_bar">

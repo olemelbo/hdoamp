@@ -231,7 +231,7 @@ h2 {
 	position:relative;
 	margin: 20px;
 	background-color:#9B9494;
-	height: 250px;
+	height: 270px;
 	width: 60%;
 }
 
@@ -250,18 +250,25 @@ h2 {
 }
 
 #comment_content {
-	min-height: 120px;
+	min-height: 150px;
     padding: 0 20px 80px;
 }
+
+#post_content {
+	min-height: 160px;
+    padding: 0 20px 80px;
+}
+
 
 .post_feedback p, .post_comment_button p, .post_statistic p, .post_statistic_button p {
 font-size: 0.8em;
 color: #ba330d;
 }
 
-#post_content p {
-	padding: 20px;
+.post h2 {
+	padding-top: 15px;
 }
+
 
 .post_bar, .entire_post_bar, .comment_bar {
 	position:absolute;
@@ -285,7 +292,7 @@ color: #ba330d;
 	float:left;
 	padding: 15px;
 	padding-bottom: 0px;
-	height: 140px;
+	height: 170px;
 }
 
 #post_content h2 {
@@ -295,7 +302,6 @@ color: #ba330d;
 #post_content p {
 	padding-top:0px;
 	font-size: 14px;
-	padding-bottom: 105px;
 }
 
 
@@ -334,6 +340,10 @@ color: #ba330d;
 
 .comment_text {
 	padding-bottom: 170px;
+}
+
+.post_comment h2 {
+	padding-top: 20px;
 }
 
 #post_content {
@@ -412,3 +422,4 @@ a:active {text-decoration:underline;}
         -webkit-border-radius: 3px;
         border-radius: 3px;
 }
+
