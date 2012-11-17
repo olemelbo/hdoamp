@@ -1,12 +1,11 @@
-<?php
-class Feedback_model extends CI_Model {
-	private $post_id;
+<?php class Feedback_comment_model extends CI_Model {
+	private $comment_id;
 	private $user_id;
-	private $post_author_id;
-	function validateFeedback($post_id, $agree, $disagree, $relevant, $informative, $well_written,$unserious) {
-		$this->post_id = $post_id;
+	private $comment_author_id;
+	function validateCommentFeedback($comment_id, $agree, $disagree, $relevant, $informative, $well_written,$unserious) {
+		$this->comment_id = $comment_id;
 		$this->user_id = $this->getUserId();
-		$this->post_author_id = $this->getPostAuthorId();
+		$this->comment_author_id = $this->getCommentAuthorId();
 		$fistFeedback = true;
 		$fistFeedback = $this->firstFeedBack();
 		$noVotingOnYourself = true;
@@ -66,12 +65,12 @@ class Feedback_model extends CI_Model {
 			}
 			
 			foreach($feedback as $key => $value) {
-					$sql = "INSERT INTO innlegg_feedback (innlegg_id, user_id, feedback) VALUES (?,?,?)";
-					$this->db->query($sql, array($this->post_id, $this->user_id, $key));
+					$sql = "INSERT INTO kommentar_feedback (kommentar_id, user_id, feedback) VALUES (?,?,?)";
+					$this->db->query($sql, array($this->comment_id, $this->user_id, $key));
 			}
 			
 			$this->load->model('points_model');
-			$this->points_model->saveUserPoints($feedback, $this->post_author_id);
+			$this->points_model->saveUserPoints($feedback, $this->comment_author_id);
 			
  			$response['response'] = "ok";
 			$response['msg'] = "Feedback ble lagret";
@@ -90,18 +89,19 @@ class Feedback_model extends CI_Model {
 		return $user_id;
 	}
 	
-	function getPostAuthorId() {
-		$sql ="SELECT user_id FROM innlegg WHERE id = ?";
-		$query = $this->db->query($sql,$this->post_id);
+	function getCommentAuthorId() {
+		$sql ="SELECT user_id FROM kommentar WHERE id = ?";
+		$query = $this->db->query($sql,$this->comment_id);
 		foreach ($query->result_array() as $row) {
 			$getPostUserId = $row['user_id'];
 		}
 		return $getPostUserId;
 	}
 	
+	
 	function firstFeedBack() {
-		$sql = "SELECT id FROM innlegg_feedback WHERE innlegg_id =? AND user_id =?";
-		$result = $this->db->query($sql, array($this->post_id, $this->user_id));
+		$sql = "SELECT id FROM kommentar_feedback WHERE kommentar_id =? AND user_id =?";
+		$result = $this->db->query($sql, array($this->comment_id, $this->user_id));
 		if($result->num_rows() > 0) {
 			return false;
 		} else {
@@ -110,15 +110,12 @@ class Feedback_model extends CI_Model {
 	}
 	
 	function noVotingOnYourself() {
-		$sql = "SELECT id, user_id FROM innlegg WHERE id = ? AND user_id = ?";
-		$result = $this->db->query($sql, array($this->post_id, $this->user_id));
+		$sql = "SELECT id, user_id FROM kommentar WHERE id = ? AND user_id = ?";
+		$result = $this->db->query($sql, array($this->comment_id, $this->user_id));
 		if($result->num_rows() > 0) {
 			return false;
 		} else {
 			return true;
 		}
 	}
-	
-	
 }
-	

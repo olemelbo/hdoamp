@@ -72,7 +72,6 @@ jQuery(document).ready(function($){
 		
 	});
 	
-	var siteURL = $("#siteurl p").text();
 	$(".save_comment_feedback_btn").click(function() {
 		var agree = $('input[name=agree]').is(':checked'); 
 		if(agree) {	agree = 1; } else { agree = 0; }
@@ -93,7 +92,7 @@ jQuery(document).ready(function($){
 		if(unserious) { unserious = 1; } else { unserious = 0; }
 		
 		var data = { 
-			post_id : post_id,
+			comment_id : comment_id,
 			agree : agree,
 			disagree : disagree,
 			relevant : relevant,
