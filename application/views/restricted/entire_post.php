@@ -18,6 +18,11 @@
 	<div id="content_post">
 		<div id="post">
 			<div id="post_id" style="display:none"><?php echo $entire_post['id']; ?></div>
+			<?php if(isset($entire_post['author'])) : ?>
+			<div class="delete_comment">
+				<input type="image" src="<?php echo base_url(); ?>images/delete_icon.png" alt="Delete comment" class="delete_post_button" id="<?php echo $entire_post['id']; ?>" />
+				</div>
+			<?php endif; ?>
 			<div id="post_author">
 				<?php if(empty($entire_post['image_link'])) : ?>
 						<div id="post_picture"><a href="#"><img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picure" id="<?php echo $entire_post['user_id']; ?>" /></a></div>	
@@ -201,9 +206,14 @@
 			<button type="button" id="logout_cancel" name="logout">Avbryt</button>	       
 	</div>
 	
-	<div id="delete_window" title="Er du sikker på at du vil slette?" style="display:none;">
+	<div id="delete_comment_window" title="Er du sikker på at du vil slette?" style="display:none;">
 			<button type="button" id="delete_comment_submit" name="slett">Ja</button>
-			<button type="button" id="delete_cancel" name="cancel">Avbryt</button>	       
+			<button type="button" id="delete_comment_cancel" name="cancel">Avbryt</button>	       
+	</div>
+	
+	<div id="delete_post_window" title="Er du sikker på at du vil slette?" style="display:none;">
+			<button type="button" id="delete_post_submit" name="slett">Ja</button>
+			<button type="button" id="delete_post_cancel" name="cancel">Avbryt</button>	       
 	</div>
 	
 	<div class="statistics_panel" style="display:none">

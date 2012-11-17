@@ -8,6 +8,18 @@ class Entire_post_model extends CI_Model {
 		return $query;
 	}
 	
+	function getPostAuthorId($user_id) 
+	{
+		$sql = "SELECT id FROM bruker WHERE studnr =?";
+		$query = $this->db->query($sql, array($user_id));
+		
+		foreach($query->result_array() as $user) {
+			$id = $user['id'];
+		}
+		
+		return $id;
+	}
+	
 	function getPostAuthorAjax($user_id) {
 		$sql = "SELECT * FROM bruker WHERE id = ?";	
 		$query_author = $this->db->query($sql, array($user_id));
