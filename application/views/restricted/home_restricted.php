@@ -52,7 +52,7 @@
 				<div class="post_bar">
 					<div class="post_alternatives">
 						<div class="post_feedback">
-							<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" alt="Submit" width="35" height="35" class="post_feedback_button"></button>
+							<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" alt="Submit" width="35" height="35" class="post_feedback_button" id="<?php echo $post['id']; ?>"></button>
 							<p>Gi feedback</p>
 						</div>
 						<div class="post_statistic">
