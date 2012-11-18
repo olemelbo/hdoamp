@@ -36,6 +36,7 @@ class Post_model extends CI_Model {
 			$hash_array = explode(" ", $hash_tags);
 			foreach($hash_array as $hash) {
 				$sql = "INSERT INTO `hashtag` (`hash_id` , `innlegg_id` , `hashtag`) VALUES (NULL , ?, ?);";
+				$hash  = str_replace("#", "", $hash);
 				$this->db->query($sql, array($this->post_id, $hash));
 			}
 		}
