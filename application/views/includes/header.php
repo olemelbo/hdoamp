@@ -24,7 +24,8 @@
 	<script language="javascript" src="<?php echo base_url(); ?>js/post_profile_picture.js"></script>
 	<script language="javascript" src="<?php echo base_url(); ?>js/comment.js"></script>
 	<script language="javascript" src="<?php echo base_url(); ?>js/delete.js"></script>
-	<script language="javascript" src="<?php echo base_url(); ?>js/jquery.fineuploader-3.0.js"></script>
+	<script src="<?php echo base_url()?>js/upload.js"></script>
+  	<script src="<?php echo base_url()?>js/ajaxfileupload.js"></script>
 	<script language="javascript" src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 	
 </head>
