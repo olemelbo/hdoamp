@@ -128,9 +128,13 @@
 			<div id="user_last_posts">
 				<p>Dine siste innlegg:</p>
 				<ul>
+				<?php if (isset($user_posts)) : ?>
 					<?php foreach($user_posts as $key => $value) : ?>
 						<li><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $key?>"><?php echo $value; ?></a></li>
 					<?php endforeach; ?>
+				<?php else : ?>
+					<p>Du har ikke skrevet noen innlegg.</p>
+				<?php endif; ?>	
 				</ul>
 			</div><!-- end user_last_posts-->
 		</div><!--end user_credentials-->

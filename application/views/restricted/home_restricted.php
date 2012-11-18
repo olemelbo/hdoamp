@@ -133,7 +133,7 @@
 			<div id="user_last_posts">
 				<p>Dine siste innlegg:</p>
 				<ul>
-					<?php if (!empty($user_post)) : ?>
+					<?php if (isset($user_posts)) : ?>
 						<?php foreach($user_posts as $key => $value) : ?>
 							<li><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $key?>""><?php echo $value; ?></a></li>
 						<?php endforeach; ?>
