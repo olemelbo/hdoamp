@@ -37,12 +37,17 @@
 			</div><!--end post_content-->
 		
 		<div class="entire_post_bar">
+			<div class="post_report">
+				<input type="image" src="<?php echo base_url(); ?>images/report.png" alt="Submit" width="35" height="35" class="post_report_button" id="<?php echo $entire_post['id']; ?>" />
+				<p>Rapporter</p>
+			</div><!--end comment_report-->
+
 			<div class="post_feedback">
-				<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" class="post_feedback_button" id="<?php echo $entire_post['id']; ?>" />
+				<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" alt="Submit" width="35" height="35" class="post_feedback_button" id="<?php echo $entire_post['id']; ?>" />
 				<p>Gi feedback</p>
 			</div>
 			<div class="post_statistic">
-				<input type="image" src="<?php echo base_url(); ?>images/graph_icon.png" class="post_statistic_button" id="<?php echo $entire_post['id']; ?>" />
+				<input type="image" src="<?php echo base_url(); ?>images/graph_icon.png"  width="35" height="35" class="post_statistic_button" id="<?php echo $entire_post['id']; ?>" />
 				<p>Se statistikk</p>
 			</div>
 		</div>

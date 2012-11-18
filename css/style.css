@@ -231,7 +231,7 @@ h2 {
 	position:relative;
 	margin: 20px;
 	background-color:#9B9494;
-	height: 270px;
+	height: 290px;
 	width: 60%;
 }
 
@@ -240,7 +240,7 @@ h2 {
 	margin-left: 25px;
 }
 
-.post_comment_button, .post_statistic, .post_statistic_button, .post_feedback_button, .post_statistic_button, .comment_report, .comment_feedback, .comment_statistics, .edit_comment {
+.post_comment_button, .post_statistic,  .post_feedback, .post_statistic, .comment_report, .comment_feedback, .comment_statistics, .edit_comment, .post_report {
 	float: left;
 	margin-left: 25px;
 }
@@ -249,7 +249,7 @@ h2 {
 	margin-right: 30px;
 }
 
-.comment_report_button, .comment_statistic_button, .comment_feedback_button, .edit_comment_button {
+.comment_report_button, .comment_statistic_button, .comment_feedback_button, .edit_comment_button, .post_report_button {
 	padding-left: 7px;
 }
 
@@ -259,14 +259,14 @@ h2 {
 }
 
 #post_content {
-	min-height: 180px;
+	min-height: 200px;
     padding: 0 20px 80px;
 }
 
 
-.post_feedback p, .post_comment_button p, .post_statistic p, .post_statistic_button p, .edit_comment p, .comment_statistic p, .comment_feedback p, .comment_report p {
-font-size: 0.8em;
-color: #ba330d;
+.post_feedback p, .post_comment_button p, .post_statistic p, .post_statistic_button p, .edit_comment p, .comment_statistic p, .comment_feedback p, .comment_report p, .post_report p {
+	font-size: 0.8em;
+	color: #ba330d;
 }
 
 .post h2 {
