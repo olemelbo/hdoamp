@@ -71,15 +71,26 @@
 					<p><?php echo $comment['comment_text']; ?></p>
 				</div>
 				<div class="comment_bar">
+					<div class="comment_report">
+						<input type="image" src="<?php echo base_url(); ?>images/report.png" alt="Submit" width="35" height="35" class="comment_report_button" id="<?php echo $comment['id']; ?>" />
+						<p>Rapporter</p>
+					</div><!--end comment_report-->
+					<?php if(isset($comment['author'])) : ?>
+					<div class="edit_comment">
+							<input type="image" src="<?php echo base_url(); ?>images/pen_icon.png" alt="Submit" width="35" height="35" class="comment_edit_button" id="<?php echo $comment['id']; ?>" />
+						<p>Rediger</p>
+					</div><!--end edit_comment-->
+					<?php endif; ?>
 					<div class="comment_feedback">
 							<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" alt="Submit" width="35" height="35" class="comment_feedback_button" id="<?php echo $comment['id']; ?>"  />
 							<p>Gi feedback</p>
-						</div>
-						<div class="comment_statistic">
-							<input type="image" src="<?php echo base_url(); ?>images/graph_icon.png" alt="Submit" width="35" height="35" class="comment_statistic_button" id="<?php echo $comment['id']; ?>" />
-							<p>Se statistikk</p>
-						</div>
-				</div>
+					</div><!--end comment_feedback-->
+					<div class="comment_statistic">
+						<input type="image" src="<?php echo base_url(); ?>images/graph_icon.png" alt="Submit" width="35" height="35" class="comment_statistic_button" id="<?php echo $comment['id']; ?>" />
+						<p>Se statistikk</p>
+					</div><!--end comment_statistic-->
+					
+				</div><!--end comment_bar-->
 			</div>
 		</div>
 		<div class="clear_both"></div>
