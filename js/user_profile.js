@@ -29,7 +29,4 @@ jQuery(document).ready(function($) {
 		$("#lightbox, #user_panel").fadeOut(300);
 	});
 	
-	$('html').click(function() {	
-	 	$("#lightbox, #user_panel").fadeOut(300);
-	});
 });
