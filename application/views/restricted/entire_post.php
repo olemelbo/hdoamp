@@ -118,9 +118,7 @@
 		
 	</div><!--end content_post-->
 	
-	<div id="sidebar">
-		<p>Masse artig innhold</p>
-	</div>
+	<?php include 'application/views/includes/sidebar.php'; ?>
 	
 	<div id="user_panel" style="display:none;">
 		<div id="profile_picture">
