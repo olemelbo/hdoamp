@@ -37,11 +37,19 @@
 			</div><!--end post_content-->
 		
 		<div class="entire_post_bar">
+			<?php if(!isset($entire_post['author'])) : ?>
 			<div class="post_report">
 				<input type="image" src="<?php echo base_url(); ?>images/report.png" alt="Submit" width="35" height="35" class="post_report_button" id="<?php echo $entire_post['id']; ?>" />
 				<p>Rapporter</p>
 			</div><!--end comment_report-->
-
+			<?php endif; ?>
+			
+			<?php if(isset($entire_post['author'])) : ?>
+			<div class="post_edit">
+				<input type="image" src="<?php echo base_url(); ?>images/pen_icon.png" alt="Submit" width="35" height="35" class="post_edit_button" id="<?php echo $entire_post['id']; ?>" />
+				<p>Rediger</p>
+			</div>
+			<?php endif; ?>
 			<div class="post_feedback">
 				<input type="image" src="<?php echo base_url(); ?>images/feedback_icon.png" alt="Submit" width="35" height="35" class="post_feedback_button" id="<?php echo $entire_post['id']; ?>" />
 				<p>Gi feedback</p>
@@ -76,10 +84,12 @@
 					<p><?php echo $comment['comment_text']; ?></p>
 				</div>
 				<div class="comment_bar">
+					<?php if(!isset($comment['author'])) : ?>
 					<div class="comment_report">
 						<input type="image" src="<?php echo base_url(); ?>images/report.png" alt="Submit" width="35" height="35" class="comment_report_button" id="<?php echo $comment['id']; ?>" />
 						<p>Rapporter</p>
 					</div><!--end comment_report-->
+					<?php endif; ?>
 					<?php if(isset($comment['author'])) : ?>
 					<div class="edit_comment">
 							<input type="image" src="<?php echo base_url(); ?>images/pen_icon.png" alt="Submit" width="35" height="35" class="comment_edit_button" id="<?php echo $comment['id']; ?>" />
