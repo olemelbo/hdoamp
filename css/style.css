@@ -362,7 +362,7 @@ h2 {
 }
 
 .post_comment {
-	width: 40%;
+	width: 50%;
 	position: relative;
 	margin: 20px;
 	background-color:#B9B6B6;
@@ -410,7 +410,7 @@ h2 {
 .post_comment {
 	background-color: #C3BEBE;
 	margin: 20px;
-	width:40%;
+	width:50%;
 }
 
 .new_comment {
