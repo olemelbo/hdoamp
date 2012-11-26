@@ -25,6 +25,10 @@ h2 {
 	font-size: 1.7em;
 }
 
+.date {
+	color: #B82F11;
+}
+
 #wrap {
 }
 
@@ -248,10 +252,6 @@ h2 {
 	padding: 20px;
 }
 
-#comment_content p {
-	color:black;
-}
-
 .new_comment h2 {
 	margin: 15px;
 }
@@ -362,7 +362,7 @@ h2 {
 }
 
 .post_comment {
-	width: 40%;
+	width: 50%;
 	position: relative;
 	margin: 20px;
 	background-color:#B9B6B6;
@@ -410,7 +410,7 @@ h2 {
 .post_comment {
 	background-color: #C3BEBE;
 	margin: 20px;
-	width:40%;
+	width:50%;
 }
 
 .new_comment {
