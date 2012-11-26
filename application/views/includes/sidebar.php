@@ -18,6 +18,6 @@
 
 	<div id="sidebar2">
 		<div id="sidebar_head2">
-			<p>#Her #kommer #hashtags!</p>
+			<p>#her #kommer #hashtags</p>
 	</div>
 </div><!-- end sidebar -->
