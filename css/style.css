@@ -100,7 +100,8 @@ h2 {
 
 #nav {
 	margin: 0 auto;
-	width: 78%;
+	width: 70%;
+	float: right;
 }
 
 #nav h3 {
