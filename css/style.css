@@ -192,6 +192,7 @@ h2 {
 
 #slogan p {
 	font-size: 1.2em;
+	letter-spacing: 8px;
 }
 
 #logout a:link, #logout a:visited, #logout a:hover, #logout a:active {
