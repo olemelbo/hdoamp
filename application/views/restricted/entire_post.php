@@ -83,7 +83,7 @@
 	
 					<?php endif; ?>
 				</div>
-				<h3><?php echo $comment['full_name']; ?></h3>
+				<p class="date">Skrevet av <span style="font-weight: bold;"><?php echo $comment['full_name']; ?></span></p>
 				<div id="comment_content">
 					<p class="date"><?php echo $comment['date']; ?></p>
 					<p><?php echo $comment['comment_text']; ?></p>
