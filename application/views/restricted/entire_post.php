@@ -133,7 +133,7 @@
 		
 	</div><!--end content_post-->
 	
-	<?php include 'application/views/includes/sidebar.php'; ?>
+	<?php include 'application/views/includes/sidebar_2.php'; ?>
 	
 	<div id="user_panel" style="display:none;">
 		<div id="profile_picture">
