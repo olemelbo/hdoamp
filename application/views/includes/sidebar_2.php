@@ -3,7 +3,7 @@
                 <div id="back_wrapper">
 		
 		        <div id="back_to_start">
-			        <p>Tilbake til forsiden</p>
+			        <p><a href="<?php echo site_url(); ?>">Tilbake til forsiden</a></p>
 		        </div>
 	        </div><!-- #pen-wrapper -->
         </div>

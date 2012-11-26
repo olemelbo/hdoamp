@@ -457,6 +457,11 @@ a:active {text-decoration:underline;}
  	width: 200px;
 }
 
+#back_to_start a {
+	color: white;
+	padding-left: 5px;
+}
+
 .form-wrapper #search {
         width: 330px;
         height: 20px;
