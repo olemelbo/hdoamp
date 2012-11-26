@@ -3,8 +3,8 @@ jQuery(document).ready(function($) {
 	 	var siteURL = $("#siteurl p").text();
 	 	var data = {
 	 		user_id : this.id
+	 		
 	 	}
-	 	
 	 	$.ajax ({
 				url : siteURL + "/entire_post/getUserDataAjax",
 				type : 'POST',

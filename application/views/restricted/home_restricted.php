@@ -34,7 +34,7 @@
 		<div class="post">
 			<div id="post_<?php echo $post['id']; ?>">
 				<?php if(empty($user_image)) : ?>
-					<div id="post_picture"><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>"><img src="<?php echo base_url()?>images/profile.jpg" alt="profile_picure" /></a></div>	
+					<div id="post_picture"><a href="#"><img src="<?php echo base_url()?>images/profile.jpg" alt="profile_picure" id="<?php echo $post['user_id']; ?>" /></a></div>	
 				<?php else : ?>
 				
 				<?php endif; ?>
@@ -155,6 +155,25 @@
 			<button class="close_feedback_btn">Lukk</button>
 		</div>
 	</div>
+	
+	<div class="panel_frame">
+		<div class="post_user_panel">
+			<div id="post_profile_picture">
+				<?php if(empty($user_image)) : ?>
+					<img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picrure" />	
+				<?php else : ?>
+				
+				<?php endif; ?>
+			</div>
+			<div class="user_credentials">
+				
+			</div><!--end user_credentials-->
+			<div class="post_profile_buttons">
+				
+			</div>
+		</div><!--end post user-->
+	</div><!--end panel frame-->
+
 	
 	<div class="statistics_panel" style="display:none">
 		<div id="statistics_high_chart_target">
