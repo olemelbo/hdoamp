@@ -97,9 +97,54 @@
 			<?php else : ?>
 			
 			<?php endif; ?>
-		</div>
+		</div><!--end profile_picture-->
 		
-	</div><!-- End user_panel-->
+		<div id="user_credentials">
+			<h3><?php echo $user_fullname; ?></h3>
+			<p><?php echo $user_department; ?></p>
+			<p>Sist innlogget: <?php echo $user_last_logged_in; ?></p>
+			<p>Poengsum: <?php if(!empty($user_score)) { echo $user_score; } else { echo "0"; } ?></p>
+			<form method="post" action="#" id="login_credentials">
+				<label for="email">Epost: </label> 
+				<input type="email" id="user_email" name="user_email" value="<?php echo $user_email; ?>" /> 
+			</form>
+			<div id="user_last_posts">
+				<p>Dine siste innlegg:</p>
+				<ul>
+				<?php if (isset($user_posts)) : ?>
+					<?php foreach($user_posts as $key => $value) : ?>
+						<li><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $key?>"><?php echo $value; ?></a></li>
+					<?php endforeach; ?>
+				<?php else : ?>
+					<p>Du har ikke skrevet noen innlegg.</p>
+				<?php endif; ?>	
+				</ul>
+			</div><!-- end user_last_posts-->
+		</div><!--end user_credentials-->
+		<div id="profile_buttons">
+			<button id="save_userprofile_btn">Lagre</button>
+			<button id="close_userprofile_btn">Lukk</button>
+		</div><!--end profile_buttons-->
+	</div><!--div end user_panel-->	
+	<div class="panel_frame">
+		<div class="post_user_panel">
+			<div id="post_profile_picture">
+				<?php if(empty($user_image)) : ?>
+					<img src="<?php echo base_url()?>/images/profile.jpg" alt="profile_picrure" />	
+				<?php else : ?>
+				
+				<?php endif; ?>
+			</div>
+			<div class="user_credentials">
+				
+			</div><!--end user_credentials-->
+			<div class="post_profile_buttons">
+				
+			</div>
+		</div><!--end post user-->
+	</div><!--end panel frame-->
+	
+	
 	
 	<div class="feedback_panel" style="display:none;">
 		<h1>Gi din feedback til innlegget</h1>
@@ -132,8 +177,9 @@
 				
 				<?php endif; ?>
 			</div>
+			
 			<div class="user_credentials">
-				
+			
 			</div><!--end user_credentials-->
 			<div class="post_profile_buttons">
 				
