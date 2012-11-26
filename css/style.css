@@ -147,6 +147,27 @@ h2 {
 	font-weight: bold;
 }
 
+#sidebar3 {
+	width: 25%;
+	float: right;
+	background-color: #f57b1d;
+	margin-bottom: 25px;
+}
+
+#sidebar_head3 {
+	margin: 20px;
+}
+
+#sidebar_content3 {
+	padding: 20px;
+}
+
+#sidebar3 p {
+  	color: white;
+	font-size: large;
+	font-weight: bold;
+}
+
 #footer {
 	clear: both;
 	height: 130px; 
