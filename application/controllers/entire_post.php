@@ -20,6 +20,16 @@
 				$data['entire_post']['date'] = $upost["date"];
 			}
 			
+			//Points
+			$this->load->model('user_ranking_model');
+			$ranking_query = $this->user_ranking_model->getRanking();
+			
+			foreach($ranking_query->result_array() as $points) {
+				$data['ranking'][$points['id']]['fname'] = $points['fnavn'];
+				$data['ranking'][$points['id']]['ename'] = $points['enavn'];
+				$data['ranking'][$points['id']]['points'] = $points['antall_poeng'];
+			}
+			
 			$this->load->model("post_comments_model");
 			$comment_query = $this->post_comments_model->getPostComments($this->uri->segment(3));
 			$areYouTheCommentAuthor = $this->post_comments_model->getCommentAuthorId($session);
