@@ -77,6 +77,23 @@
 				$data['entire_post']['user_id'] = $upost["user_id"];
 				$data['entire_post']['date'] = $upost["date"];
 			}
+
+
+			$this->load->model("post_comments_model");
+			$comment_query = $this->post_comments_model->getPostComments($this->uri->segment(3));
+			$areYouTheCommentAuthor = $this->post_comments_model->getCommentAuthorId($session);
+			foreach($comment_query->result_array() as $comment) {
+				$data['comments'][$comment['id']]['id'] = $comment['id'];
+				$data['comments'][$comment['id']]['innlegg_id'] = $comment['innlegg_id'];
+				$data['comments'][$comment['id']]['user_id'] = $comment['user_id'];
+				if($comment['user_id'] == $areYouTheCommentAuthor) {
+					$data['comments'][$comment['id']]['author'] = true;
+				}
+				$data['comments'][$comment['id']]['full_name'] = $this->post_comments_model->fullName($comment['user_id']);
+				$data['comments'][$comment['id']]['comment_text'] = $comment['comment_text'];
+				$data['comments'][$comment['id']]['date'] = $comment['date'];
+			}
+			
 			$data["main_content"] = "entire_post";
 			$this->load->view("includes/template", $data); 
 		}

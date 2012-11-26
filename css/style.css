@@ -268,7 +268,7 @@ h2 {
 }
 
 
-.post_comment_button, .post_statistic,  .post_feedback, .post_statistic, .comment_report, .comment_feedback, .comment_statistics, .edit_comment, .post_report, .post_edit {
+.post_comment_button, .post_statistic,  .post_feedback, .post_statistic, .comment_report, .comment_feedback, .comment_statistic, .edit_comment, .post_report, .post_edit {
 	float: left;
 	margin-left: 25px;
 	text-align: center;

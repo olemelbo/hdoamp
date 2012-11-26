@@ -1,6 +1,6 @@
 <?php 
 class Post_comments_model extends CI_Model {
-		
+	private $id;
 	function getPostComments($post_id) {
 		$sql = "SELECT * FROM kommentar WHERE innlegg_id = ? ORDER BY id ASC";
 		$comments_query = $this->db->query($sql, array($post_id));
@@ -61,12 +61,11 @@ class Post_comments_model extends CI_Model {
 	{
 		$sql = "SELECT id FROM bruker WHERE studnr =?";
 		$query = $this->db->query($sql, array($user_id));
-		
 		foreach($query->result_array() as $user) {
-			$id = $user['id'];
+			$this->id = $user['id'];
 		}
 		
-		return $id;
+		return $this->id;
 	}
 	
 	function fullName($user_id) {
