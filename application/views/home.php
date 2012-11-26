@@ -59,7 +59,7 @@
 		<?php endforeach; ?>
 	</div><!--end content post -->
 	
-	<?php include 'application/views/includes/sidebar.php'; ?>
+	<?php include 'application/views/includes/sidebar_3.php'; ?>
 	
 	<div id="logout_window" title="Er du sikker på at du vil logge ut?" style="display:none;">
 			<button type="button" id="logout_submit" name="logout">Ja</button>
