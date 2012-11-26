@@ -1,6 +1,7 @@
 ﻿body {
 	font-family: Helvetica, Tahoma, Arial, sans-serif;
 	color: #b82f11;
+	background-image: url('../images/dust.png');
 }
 
 p, label {
