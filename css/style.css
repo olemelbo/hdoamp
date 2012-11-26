@@ -252,6 +252,11 @@ h2 {
 	padding: 20px;
 }
 
+#comment_id {
+	color: #B82F11;
+	padding-top: 13px;
+}
+
 .new_comment h2 {
 	margin: 15px;
 }
