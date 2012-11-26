@@ -3,7 +3,6 @@ jQuery(document).ready(function($) {
 	 	var siteURL = $("#siteurl p").text();
 	 	var data = {
 	 		user_id : this.id
-	 		
 	 	}
 	 	$.ajax ({
 				url : siteURL + "/entire_post/getUserDataAjax",
@@ -45,7 +44,6 @@ jQuery(document).ready(function($) {
 						$('.post_user_panel').append('<div id="post_user_email"><p>'+ "Epost: " + email +'</p></div>');
 						$('.post_user_panel').append('<div id="post_user_last_used"><p>'+ "Sist innlogget: " + last_used +'</p></div>');
 						$('.post_user_panel').append('<div id="post_user_points"><p>' + "Antall poeng: " + points + '</p></div>');
-						$('#post_user_points').after('<button class="close_post_user_btn">Lukk</button>');
 					} else {
 						alert(data.response);
 					}
@@ -53,15 +51,6 @@ jQuery(document).ready(function($) {
 		}); 
 	});
 	
-	$(".close_post_user_btn").live("click", function() {
-	 	$(".post_user_panel").fadeOut(300);
-	 	$('#post_user_name').remove();
-	 	$('#post_user_department').remove();
-	 	$('#post_user_email').remove();
-	 	$('#post_user_last_used').remove();
-	 	$('#post_user_points').remove();
-	 	$('.close_post_user_btn').remove();
-	});
 	
 	$('html').click(function() {	
 	 	$(".post_user_panel").fadeOut(300);

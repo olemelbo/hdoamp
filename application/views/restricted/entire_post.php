@@ -73,7 +73,7 @@
 			<div id="comment_<?php echo $comment['id']; ?>">
 				<div id="comment_author">
 					<?php if(empty($entire_post['image_link'])) : ?>
-						<div id="comment_picture"><a href="#"><img src="<?php echo base_url()?>images/profile.jpg" alt="profile_picure" id="<?php echo $comment['user_id']; ?>" /></a></div>	
+						<div id="post_picture"><a href="#"><img src="<?php echo base_url()?>images/profile.jpg" alt="profile_picure" id="<?php echo $comment['user_id']; ?>" /></a></div>	
 					<?php else : ?>
 	
 					<?php endif; ?>
