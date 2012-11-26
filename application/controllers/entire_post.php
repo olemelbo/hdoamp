@@ -68,6 +68,15 @@
 			$data["main_content"] = "restricted/entire_post";
 			$this->load->view("includes/template", $data); 
 		} else  {
+			$this->load->model("entire_post_model");
+			$entire_query = $this->entire_post_model->getEntirePost($this->uri->segment(3));
+			foreach ($entire_query->result_array() as $upost) {
+				$data['entire_post']['id'] = $upost['id'];
+				$data['entire_post']['tittel'] = $upost["tittel"];
+				$data['entire_post']['in_text'] = $upost["in_text"];
+				$data['entire_post']['user_id'] = $upost["user_id"];
+				$data['entire_post']['date'] = $upost["date"];
+			}
 			$data["main_content"] = "entire_post";
 			$this->load->view("includes/template", $data); 
 		}
