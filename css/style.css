@@ -25,6 +25,10 @@ h2 {
 	font-size: 1.7em;
 }
 
+.date {
+	color: #B82F11;
+}
+
 #wrap {
 }
 
@@ -246,10 +250,6 @@ h2 {
 	max-width: 525px;
 	margin: 10px;
 	padding: 20px;
-}
-
-#comment_content p {
-	color:black;
 }
 
 .new_comment h2 {

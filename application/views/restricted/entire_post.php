@@ -83,9 +83,9 @@
 	
 					<?php endif; ?>
 				</div>
-				<h2><?php echo $comment['full_name']; ?></h2>
+				<h3><?php echo $comment['full_name']; ?></h3>
 				<div id="comment_content">
-					<h3><?php echo $comment['date']; ?></h3>
+					<p class="date"><?php echo $comment['date']; ?></p>
 					<p><?php echo $comment['comment_text']; ?></p>
 				</div>
 				<div class="comment_bar">
