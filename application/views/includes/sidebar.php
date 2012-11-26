@@ -4,10 +4,15 @@
 			<h2 class="deb">debattant</h2>
 		</div>
 		<div id="sidebar_content">
-			<p>1. Pernille Hellesvik</p>
-			<p>2. Ole Christian Melbostad</p>
-			<p>3. Alexander T&oslash;mmerholen</p>
-			<p>4. Marte Johnsen</p>
+			<?php if(isset($ranking)) : ?>
+			<ol>
+				<?php foreach($ranking as $rank) : ?>
+					<li><?php echo $rank['fname'] . " " . $rank['ename'] . " (" . $rank['points'] . ")";?></li>
+				<?php endforeach; ?>
+			</ol>
+			<?php else : ?>
+				<p>Ingen brukere har fått poeng</p>
+			<?php endif; ?>
 		</div>
 	</div><!-- end sidebar -->
 

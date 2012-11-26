@@ -23,6 +23,16 @@ class Site extends CI_Controller {
 				$data['user_posts'][$upost["id"]] = $upost["tittel"];
 			}	
 			
+			//Points
+			$this->load->model('user_ranking_model');
+			$ranking_query = $this->user_ranking_model->getRanking();
+			
+			foreach($ranking_query->result_array() as $points) {
+				$data['ranking'][$points['id']]['fname'] = $points['fnavn'];
+				$data['ranking'][$points['id']]['ename'] = $points['enavn'];
+				$data['ranking'][$points['id']]['points'] = $points['antall_poeng'];
+			}
+			
 			//Posts
 			$this->load->model('post_model');
 			$query = $this->post_model->getAllPosts();

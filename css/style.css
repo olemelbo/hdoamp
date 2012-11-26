@@ -61,7 +61,7 @@ h2 {
 }
 
 #content_post {
-	width: 78%;
+	width: 73%;
 	float: left;
 	background-color: #e6e6e6;
 }
@@ -112,7 +112,7 @@ h2 {
 }
 
 #sidebar {
-	width: 20%;
+	width: 25%;
 	float: right;
 	background-color: #e6e6e6;
 }
@@ -126,7 +126,7 @@ h2 {
 }
 
 #sidebar2 {
-	width: 20%;
+	width: 25%;
 	float: right;
 	background-color: #f57b1d;
 	margin-top: 25px;
