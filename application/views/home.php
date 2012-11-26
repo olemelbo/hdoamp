@@ -31,7 +31,7 @@
 				<h2><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $post['id']?>"><?php  echo $post['tittel'] ?></a></h2>
 				
 				<?php if(!empty($post['date'])) : ?>
-					<h3><?php echo $post['date']; ?></h3>
+					<p class="date"><?php echo $post['date']; ?></p>
 				<?php endif; ?>
 				
 				<?php if(!empty($post['hashtags'])) : ?>

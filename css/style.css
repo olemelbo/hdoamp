@@ -269,7 +269,7 @@ h2 {
 	position:relative;
 	margin: 20px;
 	background-color:#9B9494;
-	height: 290px;
+	min-height: 310px;
 	width: 60%;
 }
 
@@ -318,6 +318,7 @@ h2 {
 
 .post_truncated {
 	width: 90%;
+	margin: 20px;
 }
 
 .post img {
