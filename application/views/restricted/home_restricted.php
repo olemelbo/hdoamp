@@ -4,6 +4,7 @@
 		</div><!-- #logo -->
 		<div id='logout'><h3><a href='#'>Logg ut</a></h3></div>
 		<div id='user_profile'><h3><a href='#'> <?php echo $user_fullname; ?> | </a></h3></div>
+		<div id="about"><h3><a href="#">Om HIG Debatt | </a></h3></div>
 		<div id="search">
 			<form class="form-wrapper">
 			        <input type="text" id="search" placeholder="S&oslash;k i HiG Debatt.." required>
@@ -186,6 +187,10 @@
 			</div>
 		</div><!--end post user-->
 	</div><!--end panel frame-->
+	
+	<div class="about_panel" style="display:none">
+		<?php include 'application/views/about.php'; ?>
+	</div>
 
 	
 	<div class="statistics_panel" style="display:none">

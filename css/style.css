@@ -207,7 +207,7 @@ h2 {
 	color: #b82f11;
 }
 
-#login, #register, #logout {
+#login, #register, #logout, #about {
 	float: right;
 	margin-left: 3px;
 }
@@ -229,6 +229,11 @@ h2 {
 #slogan p {
 	font-size: 1.2em;
 	letter-spacing: 8px;
+}
+
+#login a:link, #login a:visited, #login a:hover, #login a:active,
+#about a:link, #about a:visited, #about a:hover, #about a:active  { 
+	color: #000;
 }
 
 #logout a:link, #logout a:visited, #logout a:hover, #logout a:active {
@@ -454,7 +459,6 @@ a:link, a:visited, a:hover, a:active {
 }
 a:hover {text-decoration:underline;}
 a:active {text-decoration:underline;}
-
 
 #search {
 	position: absolute;

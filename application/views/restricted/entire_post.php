@@ -4,7 +4,8 @@
 			<h1><a href="<?php echo site_url(); ?>">HiG<span style="font-weight: normal;"> Debatt</span></a></h1>
 		</div><!-- #logo -->
 		<div id='logout'><h3><a href='#'>Logg ut</a></h3></div>
-		<div id='user_profile'><h3><a href='#'> <?php echo $user_fullname; ?> | </a></h3></div>
+		<div id='user_profile'><h3><a href='#'> <?php echo " " . $user_fullname; ?> | </a></h3></div>
+		<div id="about"><h3><a href="#">Om HIG Debatt |  </a></h3></div>
 		<div id="search">
 			<form class="form-wrapper">
 			        <input type="text" id="search" placeholder="S&oslash;k i HiG Debatt.." required>
@@ -246,6 +247,10 @@
 	<div id="delete_post_window" title="Er du sikker på at du vil slette?" style="display:none;">
 			<button type="button" id="delete_post_submit" name="slett">Ja</button>
 			<button type="button" id="delete_post_cancel" name="cancel">Avbryt</button>	       
+	</div>
+	
+	<div class="about_panel" style="display:none">
+		<?php include 'application/views/about.php'; ?>
 	</div>
 	
 	<div class="statistics_panel" style="display:none">

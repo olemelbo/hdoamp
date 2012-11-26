@@ -2,7 +2,9 @@
 	<div id="header">
 		<div id="logo"><h1><a href="<?php echo site_url(); ?>">HiG<span style="font-weight: normal;"> Debatt</span></a></h1>
 		</div><!-- #logo -->
-		<div id='login'><h3><a href='#'>Logg inn</a></h3></div>
+		
+		<div id='login'><h3><a href='#'> Logg inn</a></h3></div>
+		<div id="about"><h3><a href="#">Om HIG Debatt | </a></h3></div>
 		<div id="search">
 			<form class="form-wrapper">
 			        <input type="text" id="search" placeholder="S&oslash;k i HiG Debatt.." required>
@@ -121,6 +123,10 @@
             <button type="button" id="login_submit" name="Login">Logg inn</button>
          </form>              
     </div>
+	
+	<div class="about_panel" style="display:none">
+		<?php include 'application/views/about.php'; ?>
+	</div>
 	
 	<div class="statistics_panel" style="display:none">
 		<div id="statistics_high_chart_target">

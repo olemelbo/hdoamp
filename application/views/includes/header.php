@@ -26,6 +26,7 @@
 	<script language="javascript" src="<?php echo base_url(); ?>js/delete.js"></script>
 	<script language="javascript" src="<?php echo base_url(); ?>js/edit.js"></script>
 	<script language="javascript" src="<?php echo base_url(); ?>js/scrolling.js"></script>
+	<script language="javascript" src="<?php echo base_url(); ?>js/about.js"></script>
 	<script src="<?php echo base_url()?>js/upload.js"></script>
   	<script src="<?php echo base_url()?>js/ajaxfileupload.js"></script>
   	<script src="<?php echo base_url()?>js/report.js"></script>
