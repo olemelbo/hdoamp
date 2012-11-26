@@ -78,22 +78,8 @@
 			</div>
 		</div>
 		<div class="clear_both"></div>
-		<?php endforeach; ?>
-		<div class="new_comment">
-			<h2>Skriv ny kommentar</h2>
-			<textarea id="comment_text"></textarea>
-			<br /><br />
-			<button id="save_comment_btn">Lagre</button>
-		</div>
-		<?php else : ?>
-			<div class="new_comment">
-			<h2>Skriv ny kommentar</h2>
-			<textarea id="comment_text"></textarea>
-			<br /><br />
-			<button id="save_comment_btn">Lagre</button>
-		</div>
+			<?php endforeach; ?>
 		<?php endif; ?>
-		
 		
 	</div><!--end content_post-->
 	
