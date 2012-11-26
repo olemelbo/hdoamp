@@ -105,32 +105,6 @@
 			
 			<?php endif; ?>
 		</div>
-		<div id="user_credentials">
-			<h3><?php echo $user_fullname; ?></h3>
-			<p><?php echo $user_department; ?></p>
-			<p>Sist innlogget: <?php echo $user_last_logged_in; ?></p>
-			<p>Poengsum: <?php if(!empty($user_score)) { echo $user_score; } else { echo "0"; } ?></p>
-			<form method="post" action="#" id="login_credentials">
-				<label for="email">Epost: </label> 
-				<input type="email" id="user_email" name="user_email" value="<?php echo $user_email; ?>" /> 
-			</form>
-			<div id="user_last_posts">
-				<p>Dine siste innlegg:</p>
-				<ul>
-					<?php if (isset($user_posts)) : ?>
-						<?php foreach($user_posts as $key => $value) : ?>
-							<li><a href="<?php echo site_url()?>/entire_post/loadEntirePost/<?php echo $key?>""><?php echo $value; ?></a></li>
-						<?php endforeach; ?>
-					<?php else : ?>
-						<?php echo "Du har ikke skrevet noen innlegg."; ?>
-					<?php endif; ?>
-				</ul>
-			</div>
-		</div>
-		<div id="profile_buttons">	
-			<button id="save_userprofile_btn">Lagre</button>
-			<button id="close_userprofile_btn">Lukk</button>
-		</div>
 		
 	</div><!-- End user_panel-->
 	

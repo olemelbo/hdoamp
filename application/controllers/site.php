@@ -55,19 +55,32 @@ class Site extends CI_Controller {
 			$data["main_content"] = "home";
 			$this->load->model('post_model');
 			$query = $this->post_model->getAllPosts();
+			
 			foreach ($query->result_array() as $post) {
 				$data["posts"][$post['id']]['id'] = $post['id']; 
 				$data["posts"][$post['id']]['tittel'] = $post['tittel']; 
 				$data["posts"][$post['id']]['in_text'] = $post['in_text'];
 				$data["posts"][$post['id']]['user_id'] = $post['user_id'];
 				$data["posts"][$post['id']]['date'] = $post['date'];
+				$data["posts"][$post['id']]['numberOfComments'] = $this->post_model->countComments($post['id']);
 				if(!empty($post['hashtag'])) {
 					$data["posts"][$post['id']]['hashtags'][] = $post['hashtag'];
 				}
 			}
 			
+			//Points
+			$this->load->model('user_ranking_model');
+			$ranking_query = $this->user_ranking_model->getRanking();
+			
+			foreach($ranking_query->result_array() as $points) {
+				$data['ranking'][$points['id']]['fname'] = $points['fnavn'];
+				$data['ranking'][$points['id']]['ename'] = $points['enavn'];
+				$data['ranking'][$points['id']]['points'] = $points['antall_poeng'];
+			}
+			
 			$this->load->view("includes/template", $data);
 		}
+		
 	}
 
 }
